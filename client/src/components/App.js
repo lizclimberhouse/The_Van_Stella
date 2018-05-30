@@ -10,6 +10,7 @@ import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import { Switch, Route } from 'react-router-dom';
 import Stella from './Stella';
+import StoryNew from './StoryNew';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path='/stella' component={Stella} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
+            <AuthRoute exact path='/add_story' component={StoryNew} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>

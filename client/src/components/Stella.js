@@ -5,7 +5,9 @@ export class Stella extends React.Component {
 
   render() {
     return(
-      <div>Stella the Van</div>
+      <Container>
+        <Header as='h1' textAlign='center'>Stella the Van</Header>
+      </Container>
     )
   }
 }
