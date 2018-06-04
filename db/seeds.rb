@@ -9,7 +9,8 @@
 5.times do
   Story.create(
     title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraph(2),
+    body_one: Faker::Lorem.paragraph(5),
+    body_two: Faker::Lorem.paragraph(6),
     author: Faker::Name.name,
     image_one: Faker::Avatar.image,
     image_two: Faker::Avatar.image,

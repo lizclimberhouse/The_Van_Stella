@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20180530205458) do
 
   create_table "stories", force: :cascade do |t|
     t.string "title"
-    t.text "body"
+    t.text "body_one"
+    t.text "body_two"
     t.string "author"
     t.string "image_one"
     t.string "image_two"

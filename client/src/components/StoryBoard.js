@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container, Divider, Image } from 'semantic-ui-react';
+import { Header, Container, Divider, Image, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
 
@@ -19,17 +19,31 @@ class StoryBoard extends React.Component {
           <Header as='h2'>StoryBoard</Header>
           <div>
             { stories.map( story =>
-            <div>
-              <br />
+            <Segment>
               <Header as='h3'>{story.title}</Header>
-              <Header as='h4'>Author: {story.author}</Header>
-              <div style={styles.images}>
-                <Image src={story.image_one} style={styles.imageSingle} />
-                <Image src={story.image_two} style={styles.imageSingle} />
-                <Image src={story.image_three} style={styles.imageSingle} />
-              </div>
-              <p>{story.body}</p>
-            </div>
+              <Image src={story.image_one} size='small' floated='left' />
+              <p>
+                {story.body_one}
+              </p>
+              <Image src={story.image_two} size='small' floated='right' />
+              <p>
+                {story.body_two}
+              </p>
+              <p>
+                {story.author}
+              </p>
+            </Segment>
+            // <div>
+            //   <br />
+            //   <Header as='h3'>{story.title}</Header>
+            //   <Header as='h4'>Author: {story.author}</Header>
+            //   <div style={styles.images}>
+            //     <Image src={story.image_one} style={styles.imageSingle} />
+            //     <Image src={story.image_two} style={styles.imageSingle} />
+            //     <Image src={story.image_three} style={styles.imageSingle} />
+            //   </div>
+            //   <p>{story.body}</p>
+            // </div>
             )}
           </div>
         </div>
