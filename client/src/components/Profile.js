@@ -1,16 +1,18 @@
 import React from 'react';
 import { Container, Divider, Header } from 'semantic-ui-react';
+import StoryBoard from './StoryBoard';
+import { Link } from 'react-router-dom';
 
-export class Stella extends React.Component {
-
+class Profile extends React.Component {
   render() {
     return(
       <Container style={styles.mainPadding}>
         <div style={styles.heading}>
-          <Header as='h1' textAlign='center'>Stella</Header>
-          <Header as='h4' textAlign='center' style={styles.equation}><Divider style={styles.divider} />the van</Header>
+          <Header as='h1' textAlign='center'>Profile</Header>
+          <Header as='h4' textAlign='center' style={styles.equation}><Divider style={styles.divider} /><Link to='add_story'>Add New Story</Link></Header>
         </div>
         <br/>
+        <StoryBoard url={this.props.match.path} />
       </Container>
     )
   }
@@ -29,4 +31,4 @@ const styles = {
   },
 }
 
-export default Stella;
+export default Profile;
