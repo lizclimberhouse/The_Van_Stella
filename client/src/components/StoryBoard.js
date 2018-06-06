@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Container, Divider, Image, Segment, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
+import Story from './Story';
 
 class StoryBoard extends React.Component {
 
@@ -15,6 +16,10 @@ class StoryBoard extends React.Component {
     dispatch(getStories())
   }
 
+  //TODO refactor so individual story is it's own component so we can edit 1 at a time.
+
+  
+
   render(){
     const { stories, match } = this.props;
     // debugger
@@ -23,31 +28,7 @@ class StoryBoard extends React.Component {
           <Header as='h2'>StoryBoard</Header>
           <div>
             { stories.map( story =>
-            <Segment key={story.id}>
-              
-              <Segment>
-                <Header as='h3'>{story.title}</Header>
-                <Image src={story.image_one} size='small' floated='left' />
-                <p>
-                  {story.body_one}
-                </p>
-                <Image src={story.image_two} size='small' floated='right' />
-                <p>
-                  {story.body_two}
-                </p>
-                <p>
-                  {story.author}
-                </p>
-              </Segment>
-              { this.props.url ? 
-              <Segment>
-                <Button color='yellow'>Edit</Button>
-                <Button color='red'>Delete</Button>
-              </Segment>
-              :
-              null
-              }
-            </Segment>
+            <Story id={story.id} url={this.props.url} story={story} />
             )}
           </div>
         </div>
@@ -71,7 +52,7 @@ const styles = {
 }
 
 const mapStateToProps = (state) => {
-  return { stories: state.stories, user: state.user }
+  return { stories: state.stories }
 }
 
 export default connect(mapStateToProps)(StoryBoard);
