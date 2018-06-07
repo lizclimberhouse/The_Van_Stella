@@ -38,13 +38,21 @@ class Story extends React.Component {
         </Segment>
         { this.props.url ? 
         <Segment>
-          <Button color='yellow' onClick={this.toggleEdit}>Edit</Button>
-          <Button color='red' onClick={this.deleteStory(story.id)}>Delete</Button>
-        { showStoryForm ? 
-          <StoryForm />
-          :
-          null
-        }
+          { showStoryForm ?
+            <Button color='yellow' onClick={this.toggleEdit}>Cancel</Button>
+            :
+            <div>
+              <Button color='yellow' onClick={this.toggleEdit}>Edit</Button>
+              <Button color='red' onClick={this.deleteStory(story.id)}>Delete</Button>
+            </div>
+          }
+          { showStoryForm ? 
+            <div>
+              <StoryForm id={story.id} />
+            </div>
+            :
+            null
+          }
         </Segment>
         :
         null

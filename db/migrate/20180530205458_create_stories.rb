@@ -4,6 +4,7 @@ class CreateStories < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :body_one
       t.text :body_two
+      t.text :body_three
       t.string :author
       t.string :image_one
       t.string :image_two
