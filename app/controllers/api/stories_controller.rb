@@ -1,5 +1,5 @@
 class Api::StoriesController < ApplicationController
-  # before_action :set_story, only: [:show, :update, :destroy]
+  before_action :set_story, only: [:show, :update, :destroy]
 
   def index
     render json: Story.all
@@ -14,13 +14,21 @@ class Api::StoriesController < ApplicationController
     end
   end
 
+  def update
+    if @story.update(story_params)
+      render json: @story
+    else
+      render json: story.errors, status: 422
+    end
+  end
+
   private
   
   def story_params
     params.require(:story).permit(:title, :body, :author, :image_one, :image_two, :image_three)
   end
 
-  # def set_story
-  #   @story = Story.find(params[:id])
-  # end
+  def set_story
+    @story = Story.find(params[:id])
+  end
 end

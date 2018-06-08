@@ -28,9 +28,9 @@ class StoryForm extends React.Component {
     console.log(e)
     const story = {...this.state}
     const { dispatch } = this.props
-    // const func = this.props.id ? updateStory : addStory
-    // dispatch(func(story))
-    // this.props.history.push('profile')
+    const func = this.props.id ? updateStory : addStory
+    dispatch(func(story))
+    this.props.history.push('/')
   }
 
   handleChange = (e) => {
