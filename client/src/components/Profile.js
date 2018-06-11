@@ -12,7 +12,7 @@ class Profile extends React.Component {
           <Header as='h4' textAlign='center' style={styles.equation}><Divider style={styles.divider} /><Link to='add_story'>Add New Story</Link></Header>
         </div>
         <br/>
-        <StoryBoard url={this.props.match.path} />
+        <StoryBoard url={this.props.match.path} history={this.props.history} />
       </Container>
     )
   }

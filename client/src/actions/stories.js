@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const STORIES = 'STORIES';
-export const UPDATESTORY = 'UPDATESTORY';
+export const UPDATE_STORY = 'UPDATE_STORY';
 
 
 export const getStories = () => {
@@ -12,9 +12,10 @@ export const getStories = () => {
 }
 
 export const updateStory = (story) => {
+  console.log(story)
   return (dispatch) => {
-    axios.post(`/api/story/${story.id}`, {story})
-      .then( res => dispatch({ type: UPDATESTORY, story: res.data, headers: res.headers }))
+    axios.put(`/api/stories/${story.id}`, {story})
+      .then( res => dispatch({ type: UPDATE_STORY, story: res.data, headers: res.headers }))
   }
 }
 

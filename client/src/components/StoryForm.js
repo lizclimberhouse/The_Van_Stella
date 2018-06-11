@@ -25,12 +25,13 @@ class StoryForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e)
+    // console.log(e)
     const story = {...this.state}
     const { dispatch } = this.props
     const func = this.props.id ? updateStory : addStory
+    // console.log(func)
     dispatch(func(story))
-    this.props.history.push('/')
+    this.props.history.push("/")
   }
 
   handleChange = (e) => {

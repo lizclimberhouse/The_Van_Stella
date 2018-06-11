@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180530205458) do
     t.string "title"
     t.text "body_one"
     t.text "body_two"
+    t.text "body_three"
     t.string "author"
     t.string "image_one"
     t.string "image_two"
