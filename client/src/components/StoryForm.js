@@ -2,6 +2,7 @@ import React from 'react';
 import { Component, Divider, Header, Form } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { addStory, updateStory } from '../actions/stories';
+import { setFlash } from '../actions/flash';
 
 class StoryForm extends React.Component {
 
@@ -29,6 +30,8 @@ class StoryForm extends React.Component {
     const { dispatch } = this.props
     const func = this.props.id ? updateStory : addStory
     dispatch(func(story))
+    const message = this.props.id ? 'Story Updated. ' : 'Story Added. '
+    dispatch(setFlash( message, 'green'));
     this.props.history.push("/")
   }
 

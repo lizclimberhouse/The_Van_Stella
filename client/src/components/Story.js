@@ -2,11 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Component, Divider, Header, Segment, Image, Button } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
+import StoryDelete from './StoryDelete';
 import { deleteStory } from '../actions/stories';
 
 class Story extends React.Component {
 
-  state = { showStoryForm: false }
+  state = { showStoryForm: false, showDeleteCheck: false }
 
   toggleEdit = () => {
     const { showStoryForm } = this.state;
@@ -15,15 +16,16 @@ class Story extends React.Component {
     })
   }
 
-  deleteStory = (id) => {
-    const { dispatch } = this.props
-    dispatch(deleteStory(id))
-    this.props.history.push('/')
+  toggleDeleteStory = () => {
+    const { showDeleteCheck } = this.state;
+    this.setState( state => {
+      return { showDeleteCheck: !showDeleteCheck }
+    })
   }
 
   render() {
     const { story, url } = this.props;
-    const { showStoryForm } = this.state;
+    const { showStoryForm, showDeleteCheck } = this.state;
     return(
       <Segment>
         <Segment>
@@ -42,17 +44,26 @@ class Story extends React.Component {
         </Segment>
         { this.props.url ? 
         <Segment>
-          { showStoryForm ?
-            <Button color='yellow' onClick={this.toggleEdit}>Cancel</Button>
+          { showStoryForm || showDeleteCheck ?
+            null
             :
             <div>
               <Button color='yellow' onClick={this.toggleEdit}>Edit</Button>
-              <Button color='red' onClick={() => this.deleteStory(story.id)}>Delete</Button>
+              <Button color='red' onClick={this.toggleDeleteStory}>Delete</Button>
             </div>
           }
           { showStoryForm ? 
             <div>
+              <Button color='yellow' onClick={this.toggleEdit}>Cancel</Button>
               <StoryForm id={story.id} history={this.props.history} {...story} />
+            </div>
+            :
+            null
+          }
+          { showDeleteCheck ? 
+            <div>
+              <Button color='yellow' onClick={this.toggleDeleteStory}>Cancel</Button>
+              <StoryDelete id={story.id} history={this.props.history} {...story} />
             </div>
             :
             null
