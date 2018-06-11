@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Divider, Header } from 'semantic-ui-react';
+import { Container, Divider, Header, Button } from 'semantic-ui-react';
 import StoryBoard from './StoryBoard';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,10 @@ class Profile extends React.Component {
       <Container style={styles.mainPadding}>
         <div style={styles.heading}>
           <Header as='h1' textAlign='center'>Profile</Header>
-          <Header as='h4' textAlign='center' style={styles.equation}><Divider style={styles.divider} /><Link to='add_story'>Add New Story</Link></Header>
+          <Header as='h4' textAlign='center' style={styles.equation}>
+            <Divider style={styles.divider} />
+            <Link to='story_new'><Button color='blue'>Add New Story</Button></Link>
+          </Header>
         </div>
         <br/>
         <StoryBoard url={this.props.match.path} history={this.props.history} />

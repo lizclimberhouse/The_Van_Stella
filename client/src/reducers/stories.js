@@ -1,4 +1,4 @@
-import { STORIES, UPDATE_STORY } from '../actions/stories';
+import { STORIES, UPDATE_STORY, ADD_STORY, DELETE_STORY } from '../actions/stories';
 
 const stories = ( state = [], action ) => {
   switch(action.type) {
@@ -10,6 +10,10 @@ const stories = ( state = [], action ) => {
           return action.story
         return s;
       })
+    case ADD_STORY:
+      return [action.story, ...state];
+    case DELETE_STORY:
+      return state.filter( s => s.id !== action.id )
     default:
       return state;
   }

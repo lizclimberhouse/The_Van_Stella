@@ -7,22 +7,12 @@ import Story from './Story';
 class StoryBoard extends React.Component {
 
   componentDidMount() {
-        console.log(this.props.url)
-        // const profile = games.find( g => g.id === parseInt(this.props.match.params.id, 10 ) ) || {}
-
-
     const { dispatch, stories } = this.props;
-    // debugger 
     dispatch(getStories())
   }
 
-  //TODO refactor so individual story is it's own component so we can edit 1 at a time.
-
-  
-
   render(){
     const { stories, match } = this.props;
-    // debugger
       return(
         <div style={styles.storyBox}>
           <Header as='h2'>StoryBoard</Header>

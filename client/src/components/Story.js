@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Component, Divider, Header, Segment, Image, Button } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
+import { deleteStory } from '../actions/stories';
 
 class Story extends React.Component {
 
@@ -14,7 +16,9 @@ class Story extends React.Component {
   }
 
   deleteStory = (id) => {
-    //TODO
+    const { dispatch } = this.props
+    dispatch(deleteStory(id))
+    this.props.history.push('/')
   }
 
   render() {
@@ -43,7 +47,7 @@ class Story extends React.Component {
             :
             <div>
               <Button color='yellow' onClick={this.toggleEdit}>Edit</Button>
-              <Button color='red' onClick={this.deleteStory(story.id)}>Delete</Button>
+              <Button color='red' onClick={() => this.deleteStory(story.id)}>Delete</Button>
             </div>
           }
           { showStoryForm ? 
@@ -62,4 +66,4 @@ class Story extends React.Component {
   }
 }
 
-export default Story;
+export default connect()(Story);

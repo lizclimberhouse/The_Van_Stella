@@ -19,7 +19,7 @@ export class StoryNew extends React.Component {
             <Header as='h4' textAlign='center' style={styles.equation}><Divider style={styles.divider} /></Header>
           </div>
           <br/>
-          <StoryForm />
+          <StoryForm history={this.props.history} />
         </Container>
       );
     }
