@@ -48,7 +48,7 @@ class Story extends React.Component {
           }
           { showStoryForm ? 
             <div>
-              <StoryForm id={story.id} history={this.props.history} />
+              <StoryForm id={story.id} history={this.props.history} {...story} />
             </div>
             :
             null

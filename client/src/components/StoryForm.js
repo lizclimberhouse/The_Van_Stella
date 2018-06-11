@@ -5,7 +5,7 @@ import { addStory, updateStory } from '../actions/stories';
 
 class StoryForm extends React.Component {
 
-  initalStory = { 
+  initialStory = { 
     title: '',
     body_one: '',
     body_two: '',
@@ -16,7 +16,7 @@ class StoryForm extends React.Component {
     image_three: '',
   }
 
-  state = {...this.initalStory}
+  state = {...this.initialStory}
 
   componentDidMount() {
     if ( this.props.id )
@@ -25,11 +25,9 @@ class StoryForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    // console.log(e)
     const story = {...this.state}
     const { dispatch } = this.props
     const func = this.props.id ? updateStory : addStory
-    // console.log(func)
     dispatch(func(story))
     this.props.history.push("/")
   }
