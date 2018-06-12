@@ -3,6 +3,7 @@ import { Menu } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
+import Nav from '../images/nav.png';
 
 class NavBar extends Component {
   rightNavs = () => {
@@ -49,6 +50,15 @@ class NavBar extends Component {
     );
   }
 }
+// style={styles.navBar}
+// const styles = {
+//   navBar: {
+//     height: '300px',
+//     backgroundImage: `url(${Nav})`,
+//     width: 'auto',
+//     backgroundRepeat: 'no-repeat'
+//   },
+// }
 
 const mapStateToProps = state => {
   return { user: state.user };

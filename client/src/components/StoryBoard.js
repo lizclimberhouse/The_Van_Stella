@@ -15,7 +15,7 @@ class StoryBoard extends React.Component {
     const { stories, match } = this.props;
       return(
         <div style={styles.storyBox}>
-          <Header as='h2'>StoryBoard</Header>
+          <Header style={styles.title} as='h2'>StoryBoard</Header>
           <div>
             { stories.map( story =>
             <Story id={story.id} url={this.props.url} story={story} history={this.props.history} />
@@ -28,7 +28,7 @@ class StoryBoard extends React.Component {
 
 const styles = {
   storyBox: {
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
     padding: '50px',
   },
   images: {
@@ -38,6 +38,9 @@ const styles = {
   },
   imageSingle: {
     width: '220px',
+  },
+  title: {
+    color: 'white',
   },
 }
 
