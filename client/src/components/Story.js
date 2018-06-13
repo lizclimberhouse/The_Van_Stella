@@ -28,7 +28,7 @@ class Story extends React.Component {
     const { showStoryForm, showDeleteCheck } = this.state;
     return(
       <Segment>
-        <Segment>
+        <Segment >
           <Header as='h3'>{story.title}</Header>
           <Image src={story.image_one} size='small' floated='left' />
           <p>
@@ -76,5 +76,11 @@ class Story extends React.Component {
     )
   }
 }
+// style={styles.boxSize}
+// const styles = {
+//   boxSize: {
+//     height: '250px',
+//   },
+// }
 
 export default connect()(Story);

@@ -18,7 +18,7 @@ class StoryBoard extends React.Component {
           <Header style={styles.title} as='h2'>StoryBoard</Header>
           <div>
             { stories.map( story =>
-            <Story id={story.id} url={this.props.url} story={story} history={this.props.history} />
+            <Story style={styles.boxSize} id={story.id} url={this.props.url} story={story} history={this.props.history} />
             )}
           </div>
         </div>

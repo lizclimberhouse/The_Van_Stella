@@ -12,16 +12,16 @@ import { Switch, Route } from 'react-router-dom';
 import Stella from './Stella';
 import Profile from './Profile';
 import StoryNew from './StoryNew';
-import Mountains from '../images/mountains.png';
+import AppBackground from '../styled/AppBackground';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <AppBackground>
         <NavBar />
         <Flash />
         <FetchUser>
-          <Switch style={styles.background}>
+          <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/stella' component={Stella} />
             <AuthRoute exact path='/login' component={Login} />
@@ -31,14 +31,8 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
-      </div>
+      </AppBackground>
     );
-  }
-}
-
-const styles = {
-  background: {
-    backgroundImage: `url(${Mountains})`
   }
 }
 
