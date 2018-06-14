@@ -1,37 +1,25 @@
 import React from 'react';
-import { Container, Divider, Header, Button } from 'semantic-ui-react';
+import { Container, Button } from 'semantic-ui-react';
 import StoryBoard from './StoryBoard';
 import { Link } from 'react-router-dom';
+import { Title, Header1, Header4, DividerWhite } from './StyledComp';
 
 class Profile extends React.Component {
   render() {
     return(
-      <Container style={styles.mainPadding}>
-        <div style={styles.heading}>
-          <Header as='h1' textAlign='center'>Profile</Header>
-          <Header as='h4' textAlign='center' style={styles.equation}>
-            <Divider style={styles.divider} />
-            <Link to='story_new'><Button color='blue'>Add New Story</Button></Link>
-          </Header>
-        </div>
-        <br/>
+      <Container>
+        <Title>
+          <Header1>Profile</Header1>
+          <Header4>
+            <DividerWhite />
+            <Link to='story_new'><Button>Add New Story</Button></Link>
+          </Header4>
+        </Title>
+        {/* <br/> */}
         <StoryBoard url={this.props.match.path} history={this.props.history} />
       </Container>
     )
   }
-}
-
-const styles = {
-  mainPadding: {
-    padding: '30px 0',
-  },
-  divider: {
-    backgroundColor: 'white',
-  },
-  heading: {
-    backgroundColor: 'green',
-    padding: '50px',
-  },
 }
 
 export default Profile;

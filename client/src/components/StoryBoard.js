@@ -1,8 +1,9 @@
 import React from 'react';
-import { Header, Container, Divider, Image, Segment, Button } from 'semantic-ui-react';
+// import { Header, Container, Divider, Image, Segment, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
 import Story from './Story';
+import { Header2 } from './StyledComp';
 
 class StoryBoard extends React.Component {
 
@@ -15,7 +16,7 @@ class StoryBoard extends React.Component {
     const { stories, match } = this.props;
       return(
         <div style={styles.storyBox}>
-          <Header style={styles.title} as='h2'>StoryBoard</Header>
+          <Header2>StoryBoard</Header2>
           <div>
             { stories.map( story =>
             <Story style={styles.boxSize} id={story.id} url={this.props.url} story={story} history={this.props.history} />
@@ -28,7 +29,6 @@ class StoryBoard extends React.Component {
 
 const styles = {
   storyBox: {
-    // backgroundColor: 'yellow',
     padding: '50px',
   },
   images: {
@@ -38,9 +38,6 @@ const styles = {
   },
   imageSingle: {
     width: '220px',
-  },
-  title: {
-    color: 'white',
   },
 }
 

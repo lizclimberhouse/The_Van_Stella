@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header, Segment, Form, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { handleLogin } from '../actions/auth';
-
+import { Header1 } from './StyledComp';
 class Login extends Component {
   state = { email: '', password: '' };
 
@@ -22,7 +22,7 @@ class Login extends Component {
     const { email, password } = this.state;
     return (
       <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
+        <Header1>Login</Header1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label htmlFor='email'>Email</label>
@@ -46,7 +46,7 @@ class Login extends Component {
             />
           </Form.Field>
           <Segment textAlign='center' basic>
-            <Button primary type='submit'>Submit</Button>
+            <Button type='submit'>Submit</Button>
           </Segment>
         </Form>
       </Segment>

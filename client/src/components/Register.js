@@ -3,7 +3,7 @@ import { Header, Form, Button, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/auth';
 import { setFlash } from '../actions/flash';
-
+import { Header1 } from './StyledComp';
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '' };
 
@@ -29,7 +29,7 @@ class Register extends Component {
 
     return (
       <Segment basic>
-        <Header as='h1' textAlign='center'>Register Component</Header>
+        <Header1>Register Component</Header1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label htmlFor='email'>Email</label>

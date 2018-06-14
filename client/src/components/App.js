@@ -12,7 +12,7 @@ import { Switch, Route } from 'react-router-dom';
 import Stella from './Stella';
 import Profile from './Profile';
 import StoryNew from './StoryNew';
-import AppBackground from '../styled/AppBackground';
+import { AppBackground } from './StyledComp';
 
 class App extends Component {
   render() {
