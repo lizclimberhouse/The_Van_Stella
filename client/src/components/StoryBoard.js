@@ -15,7 +15,7 @@ class StoryBoard extends React.Component {
   render(){
     const { stories, match } = this.props;
       return(
-        <div style={styles.storyBox}>
+        <div>
           <Header2>StoryBoard</Header2>
           <div>
             { stories.map( story =>

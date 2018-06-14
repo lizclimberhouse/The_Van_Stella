@@ -10,7 +10,6 @@ export class Stella extends React.Component {
           <Header1>Stella</Header1>
           <Header4><DividerWhite />the van</Header4>
         </Title>
-        <br/>
       </Container>
     )
   }

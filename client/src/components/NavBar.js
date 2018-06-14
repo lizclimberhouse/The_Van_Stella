@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Container, Image, MenuMenu } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
-import Nav from '../images/nav.png';
+import van from '../images/van.png'
 
 class NavBar extends Component {
   rightNavs = () => {
@@ -13,9 +13,10 @@ class NavBar extends Component {
       return (
         <Menu.Menu position='right'>
            <Link to='/profile'>
-            <Menu.Item name='Profile' />
+            <Menu.Item style={styles.navLinks} name='Profile' />
           </Link>
           <Menu.Item
+            style={styles.navLinks}
             name='Logout'
             onClick={() => dispatch(handleLogout(history))}
           />
@@ -23,26 +24,29 @@ class NavBar extends Component {
       );
     }
     return (
-      <Menu.Menu position='right'>
-        <Link to='/register'>
-          <Menu.Item name='Register' />
-        </Link>
-        <Link to='/login'>
-          <Menu.Item name='Login' />
-        </Link>
+      <Menu.Menu position='right' verticalAlign='top'>
+        <Image src={van} style={styles.pic} />
       </Menu.Menu>
+      // <Menu.Menu position='right'>
+      //   <Link to='/register'>
+      //     <Menu.Item style={styles.navLinks} name='Register' />
+      //   </Link>
+      //   <Link to='/login'>
+      //     <Menu.Item style={styles.navLinks} name='Login' />
+      //   </Link>
+      // </Menu.Menu>
     );
   }
 
   render() {
     return (
-      <div >
-        <Menu pointing secondary>
+      <div>
+        <Menu pointing secondary style={styles.border}>
           <Link to='/'>
-            <Menu.Item name='Home' />
+            <Menu.Item style={styles.navLinks} name='Home' />
           </Link>
           <Link to='/stella'>
-            <Menu.Item name='Stella' />
+            <Menu.Item style={styles.navLinks} name='Stella' />
           </Link>
           { this.rightNavs() }
         </Menu>
@@ -50,15 +54,19 @@ class NavBar extends Component {
     );
   }
 }
-// style={styles.navBar}
-// const styles = {
-//   navBar: {
-//     height: '300px',
-//     backgroundImage: `url(${Nav})`,
-//     width: 'auto',
-//     backgroundRepeat: 'no-repeat'
-//   },
-// }
+
+const styles = {
+  navLinks: {
+    color: 'white',
+  },
+  border: {
+    border: 'none',
+  },
+  pic: {
+    height: '50px',
+    paddingRight: '20px',
+  }
+}
 
 const mapStateToProps = state => {
   return { user: state.user };

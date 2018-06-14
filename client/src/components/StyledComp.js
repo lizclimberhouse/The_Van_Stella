@@ -5,7 +5,7 @@ export const AppBackground = styled.div`
   background: url(${Mountains});
 `
 export const Title = styled.div`
-  padding: 50px 50px 0 50px;
+  padding-top: 50px;
 `
 export const DividerWhite = styled.hr`
   background-color: white;

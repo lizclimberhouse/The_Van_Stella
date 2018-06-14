@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Divider, Header } from 'semantic-ui-react';
+import { Container, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
 import StoryForm from './StoryForm';
+import { Title, Header1, Header4, DividerWhite } from './StyledComp';
 
 export class StoryNew extends React.Component {
 
@@ -13,29 +14,19 @@ export class StoryNew extends React.Component {
 
     render() {
       return (
-        <Container style={styles.mainPadding}>
-          <div style={styles.heading}>
-            <Header as='h1' textAlign='center'>Add New Story</Header>
-            <Header as='h4' textAlign='center' style={styles.equation}><Divider style={styles.divider} /></Header>
-          </div>
-          <br/>
-          <StoryForm history={this.props.history} />
+        <Container>
+          <Title>
+            <Header1>Add New Story</Header1>
+            <Header4><DividerWhite /></Header4>
+          </Title>
+          <Segment>
+            <Segment>
+            <StoryForm history={this.props.history} />
+            </Segment>
+          </Segment>
         </Container>
       );
     }
-  }
-  
-  const styles = {
-    mainPadding: {
-      padding: '30px 0',
-    },
-    divider: {
-      backgroundColor: 'white',
-    },
-    heading: {
-      backgroundColor: 'green',
-      padding: '50px',
-    },
   }
 
 const mapStateToProps = (state) => {

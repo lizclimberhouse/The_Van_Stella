@@ -12,7 +12,6 @@ class Home extends Component {
             <Header1>The Van Stella</Header1>
             <Header4>2 humans<br/>1 dog<br/>+ a van<DividerWhite />weekend warriors</Header4>
           </Title>
-          {/* <br/> */}
           <StoryBoard/>
         </Container>
       </div>
