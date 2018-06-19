@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const STORIES = 'STORIES';
+export const RECENT_STORIES = 'RECENT_STORIES';
 export const UPDATE_STORY = 'UPDATE_STORY';
 export const ADD_STORY = 'ADD_STORY';
 export const DELETE_STORY = 'DELETE_STORY';
@@ -10,6 +11,13 @@ export const getStories = () => {
   return (dispatch) => {
     axios.get('/api/stories')
       .then( res => dispatch({ type: STORIES, stories: res.data, headers: res.headers }))
+  }
+}
+
+export const getRecentStories = () => {
+  return (dispatch) => {
+    axios.get('/api/recent_stories')
+      .then( res => dispatch({ type: RECENT_STORIES, stories: res.data, headers: res.headers }))
   }
 }
 

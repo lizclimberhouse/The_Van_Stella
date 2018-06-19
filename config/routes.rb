@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   namespace :api do
     resources :stories
     #API ROUTES SHOULD GO HERE
+    get 'recent_stories', to: 'stories#recent_stories'
   end
 
+  
   #Do not place any routes below this one
   get '*other', to: 'static#index'
 end

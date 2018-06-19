@@ -9,7 +9,7 @@ class Api::StoriesController < ApplicationController
     render json: Story.all.order(created_at: :desc)
   end
 
-  def recent
+  def recent_stories
     render json: Story.order(created_at: :desc).limit(3)
   end
 

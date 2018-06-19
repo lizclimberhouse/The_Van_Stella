@@ -10,7 +10,7 @@ class StoryDelete extends React.Component {
     const { dispatch } = this.props
     dispatch(deleteStory(id))
     dispatch(setFlash('Story Deleted. Redirected to Home page', 'red'));
-    this.props.history.push('/')
+    this.props.history.push('/archive')
   }
 
   render() {

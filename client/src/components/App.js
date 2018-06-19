@@ -13,6 +13,7 @@ import Stella from './Stella';
 import Profile from './Profile';
 import StoryNew from './StoryNew';
 import { AppBackground } from './StyledComp';
+import Archive from './Archive';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/stella' component={Stella} />
+            <Route exact path='/archive' component={Archive} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <ProtectedRoute exact path='/profile' component={Profile} />

@@ -42,6 +42,7 @@ class Story extends React.Component {
             {story.author}
           </p>
         </Segment>
+        {/* TODO make another version of "StoryBoard" that is the recent stories, then render this same component here. Do not pass the URL prop through. */}
         { this.props.url ? 
         <Segment>
           { showStoryForm || showDeleteCheck ?

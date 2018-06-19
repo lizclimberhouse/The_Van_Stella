@@ -32,7 +32,7 @@ class StoryForm extends React.Component {
     dispatch(func(story))
     const message = this.props.id ? 'Story Updated. ' : 'Story Added. '
     dispatch(setFlash( message, 'green'));
-    this.props.history.push("/")
+    this.props.history.push("/archive")
   }
 
   handleChange = (e) => {
