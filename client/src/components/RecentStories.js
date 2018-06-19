@@ -1,14 +1,12 @@
 import React from 'react';
-import { Container, Divider, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getRecentStories } from '../actions/stories';
 import Story from './Story';
-import { Header2 } from './StyledComp';
 
 class RecentStories extends React.Component {
 
   componentDidMount() {
-    const { dispatch, stories } = this.props;
+    const { dispatch } = this.props;
     dispatch(getRecentStories())
   }
 
@@ -16,12 +14,9 @@ class RecentStories extends React.Component {
     const { stories } = this.props;
     return(
       <div>
-        <div>RecentStories</div>
-          <div>
-            { stories.map( story =>
-            <Story style={styles.boxSize} id={story.id} story={story} />
-            )}
-          </div>
+        { stories.map( story =>
+          <Story style={styles.boxSize} id={story.id} story={story} />
+        )}
       </div>
     )
   }

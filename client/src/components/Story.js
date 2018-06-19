@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Component, Divider, Header, Segment, Image, Button } from 'semantic-ui-react';
+import { Header, Segment, Image, Button } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
 import StoryDelete from './StoryDelete';
-import { deleteStory } from '../actions/stories';
 
 class Story extends React.Component {
 
@@ -42,8 +41,7 @@ class Story extends React.Component {
             {story.author}
           </p>
         </Segment>
-        {/* TODO make another version of "StoryBoard" that is the recent stories, then render this same component here. Do not pass the URL prop through. */}
-        { this.props.url ? 
+        { url ? 
         <Segment>
           { showStoryForm || showDeleteCheck ?
             null
@@ -77,11 +75,5 @@ class Story extends React.Component {
     )
   }
 }
-// style={styles.boxSize}
-// const styles = {
-//   boxSize: {
-//     height: '250px',
-//   },
-// }
 
 export default connect()(Story);

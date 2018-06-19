@@ -1,30 +1,25 @@
 import React from 'react';
-// import { Header, Container, Divider, Image, Segment, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
 import Story from './Story';
-import { Header2 } from './StyledComp';
 
 class StoryBoard extends React.Component {
 
   componentDidMount() {
-    const { dispatch, stories } = this.props;
+    const { dispatch } = this.props;
     dispatch(getStories())
   }
 
   render(){
-    const { stories, match } = this.props;
-      return(
-        <div>
-          <Header2>StoryBoard</Header2>
-          <div>
-            { stories.map( story =>
-            <Story style={styles.boxSize} id={story.id} url={this.props.url} story={story} history={this.props.history} />
-            )}
-          </div>
-        </div>
-      )
-    }
+    const { stories } = this.props;
+    return(
+      <div>
+        { stories.map( story =>
+          <Story style={styles.boxSize} id={story.id} url={this.props.url} story={story} history={this.props.history} />
+        )}
+      </div>
+    )
+  }
 }
 
 const styles = {

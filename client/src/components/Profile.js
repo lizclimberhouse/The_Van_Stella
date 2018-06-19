@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'semantic-ui-react';
+import { Container, Button, Divider } from 'semantic-ui-react';
 import StoryBoard from './StoryBoard';
 import { Link } from 'react-router-dom';
 import { Title, Header1, Header4, DividerWhite } from './StyledComp';
@@ -14,8 +14,8 @@ class Profile extends React.Component {
             <DividerWhite />
             <Link to='story_new'><Button>Add New Story</Button></Link>
           </Header4>
+          <Divider hidden />
         </Title>
-        {/* <br/> */}
         <StoryBoard url={this.props.match.path} history={this.props.history} />
       </Container>
     )

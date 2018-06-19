@@ -1,5 +1,5 @@
 import React from 'react';
-import { Component, Divider, Header, Form } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { addStory, updateStory } from '../actions/stories';
 import { setFlash } from '../actions/flash';

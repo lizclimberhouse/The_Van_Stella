@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react';
-// import StoryBoard from './StoryBoard';
+import { Container, Divider } from 'semantic-ui-react';
 import { Title, Header1, Header4, DividerWhite } from './StyledComp';
 import StoryBoard from './StoryBoard';
 
@@ -11,7 +10,8 @@ class Archive extends React.Component {
         <Container>
           <Title>
             <Header1>Archives</Header1>
-            <DividerWhite />
+            <Header4>2 humans<br/>1 dog<br/>+ a van<DividerWhite />weekend warriors</Header4>
+            <Divider hidden />
           </Title>
           <StoryBoard/>
         </Container>
