@@ -9,6 +9,10 @@ class Api::StoriesController < ApplicationController
     render json: Story.all.order(created_at: :desc)
   end
 
+  def recent
+    render json: Story.order(created_at: :desc).limit(3)
+  end
+
   def create
     story = Story.create(story_params)
     if story.save
@@ -27,7 +31,6 @@ class Api::StoriesController < ApplicationController
   end
 
   def destroy
-    # binding.pry
     @story.destroy
   end
 
