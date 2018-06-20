@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Header, Segment, Image, Button } from 'semantic-ui-react';
+import { Header, Segment, Image, Button, Rating } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
 import StoryDelete from './StoryDelete';
 
@@ -29,6 +29,7 @@ class Story extends React.Component {
       <div style={styles.fade}>
         <div style={styles.fade2}>
           <Header as='h3'>{story.title}</Header>
+          <Rating icon='star' defaultRating={5} maxRating={5} />
           <Image src={story.image_one} size='small' floated='left' />
           <p>
             {story.body_one}
@@ -42,7 +43,8 @@ class Story extends React.Component {
           </p>
         </div>
         { url ? 
-        <Segment>
+        <div style={styles.fade2}>
+        {/* <Segment> */}
           { showStoryForm || showDeleteCheck ?
             null
             :
@@ -67,7 +69,8 @@ class Story extends React.Component {
             :
             null
           }
-        </Segment>
+        {/* </Segment> */}
+        </div>
         :
         null
         }
@@ -82,14 +85,12 @@ const styles = {
     margin: "1rem 0",
     padding: "1em 1em",
     borderRadius: ".28571429rem",
-    // padding: "20px",
   },
   fade2: {
     backgroundColor: "rgba(255, 255, 255, 0.7)",
     margin: "1rem 0",
     padding: "1em 1em",
     borderRadius: ".28571429rem",
-    // padding: "20px",
   }
 }
 
