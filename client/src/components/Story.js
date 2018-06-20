@@ -26,8 +26,8 @@ class Story extends React.Component {
     const { story, url } = this.props;
     const { showStoryForm, showDeleteCheck } = this.state;
     return(
-      <Segment>
-        <Segment>
+      <div style={styles.fade}>
+        <div style={styles.fade2}>
           <Header as='h3'>{story.title}</Header>
           <Image src={story.image_one} size='small' floated='left' />
           <p>
@@ -40,7 +40,7 @@ class Story extends React.Component {
           <p>
             {story.author}
           </p>
-        </Segment>
+        </div>
         { url ? 
         <Segment>
           { showStoryForm || showDeleteCheck ?
@@ -71,8 +71,25 @@ class Story extends React.Component {
         :
         null
         }
-      </Segment>
+      </div>
     )
+  }
+}
+
+const styles = {
+  fade: {
+    backgroundColor: "rgba(255, 255, 255, 0.4)",
+    margin: "1rem 0",
+    padding: "1em 1em",
+    borderRadius: ".28571429rem",
+    // padding: "20px",
+  },
+  fade2: {
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    margin: "1rem 0",
+    padding: "1em 1em",
+    borderRadius: ".28571429rem",
+    // padding: "20px",
   }
 }
 

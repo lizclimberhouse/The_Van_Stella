@@ -12,7 +12,7 @@ class Profile extends React.Component {
           <Header1>Profile</Header1>
           <Header4>
             <DividerWhite />
-            <Link to='story_new'><Button>Add New Story</Button></Link>
+            <Link to='story_new'><Button color='green'>Add New Story</Button></Link>
           </Header4>
           <Divider hidden />
         </Title>

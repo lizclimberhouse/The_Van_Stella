@@ -11,6 +11,7 @@ export class Stella extends React.Component {
           <Header4>2 humans<br/>1 dog<br/>+ a van<DividerWhite />weekend warriors</Header4>
           <Divider hidden />
         </Title>
+        {/* something rendered here */}
       </Container>
     )
   }
