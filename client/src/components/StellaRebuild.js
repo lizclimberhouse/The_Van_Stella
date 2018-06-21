@@ -1,14 +1,20 @@
 import React from 'react';
 import { Header, Step, Icon, Image, Segment } from 'semantic-ui-react';
+import Options from './Options';
 
 class StellaRebuild extends React.Component {
+  state = { option: 'GettingStella'}
 
+  setOption = (option) => {
+    //TODO have this set state an option that selects which Step is "active" and then pass it through to the Options component.
+  }
+  
   render() {
     return(
       <div>
         <div>
           <Step.Group attached='top'>
-            <Step>
+            <Step onclick={this.setOption()}>
               <Icon name='truck' />
               <Step.Content>
                 <Step.Title>Getting Stella</Step.Title>
@@ -16,7 +22,7 @@ class StellaRebuild extends React.Component {
               </Step.Content>
             </Step>
 
-            <Step active>
+            <Step onclick={this.setOption()}>
             {/* Need to make a toggle or something for which step is active :) */}
               <Icon name='trash' />
               <Step.Content>
@@ -25,7 +31,7 @@ class StellaRebuild extends React.Component {
               </Step.Content>
             </Step>
 
-            <Step>
+            <Step onclick={this.setOption()}>
               <Icon name='wrench' />
               <Step.Content>
                 <Step.Title>Rebuild</Step.Title>
@@ -33,7 +39,8 @@ class StellaRebuild extends React.Component {
             </Step>
           </Step.Group>
           <Segment attached style={styles.border}>
-            <p>Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked</p>
+            <Options />
+            {/* <p>Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked</p> */}
           </Segment>
         </div>
       </div>
