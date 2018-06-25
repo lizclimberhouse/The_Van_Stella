@@ -1,20 +1,37 @@
 import React from 'react';
-import { Header, Step, Icon, Image, Segment } from 'semantic-ui-react';
+import { Header, Step, Icon, Image, Segment, Button } from 'semantic-ui-react';
 import Options from './Options';
 
 class StellaRebuild extends React.Component {
-  state = { option: 'GettingStella'}
+  state = { option: "", text: "" }
 
-  setOption = (option) => {
-    //TODO have this set state an option that selects which Step is "active" and then pass it through to the Options component.
+  setOption1 = () => {
+    const { option } = this.state;
+    this.setState( state => {
+      return { option: "GettingStella" }
+    })
   }
-  
+
+  setOption2 = () => {
+    const { option } = this.state;
+    this.setState( state => {
+      return { option: "CleanOut" }
+    })
+  }
+
+  setOption3 = () => {
+    const { option } = this.state;
+    this.setState( state => {
+      return { option: "Rebuild" }
+    })
+  }
+
   render() {
     return(
       <div>
         <div>
           <Step.Group attached='top'>
-            <Step onclick={this.setOption()}>
+            <Step onClick={this.setOption1}>
               <Icon name='truck' />
               <Step.Content>
                 <Step.Title>Getting Stella</Step.Title>
@@ -22,7 +39,7 @@ class StellaRebuild extends React.Component {
               </Step.Content>
             </Step>
 
-            <Step onclick={this.setOption()}>
+            <Step onClick={this.setOption2}>
             {/* Need to make a toggle or something for which step is active :) */}
               <Icon name='trash' />
               <Step.Content>
@@ -31,7 +48,7 @@ class StellaRebuild extends React.Component {
               </Step.Content>
             </Step>
 
-            <Step onclick={this.setOption()}>
+            <Step onClick={this.setOption3}>
               <Icon name='wrench' />
               <Step.Content>
                 <Step.Title>Rebuild</Step.Title>
@@ -39,7 +56,7 @@ class StellaRebuild extends React.Component {
             </Step>
           </Step.Group>
           <Segment attached style={styles.border}>
-            <Options />
+            <Options option={this.state.option} />
             {/* <p>Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked Text here depending on the differnet button clicked</p> */}
           </Segment>
         </div>
@@ -69,55 +86,3 @@ const styles = {
 }
 
 export default StellaRebuild;
-
-{/* <div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Purchase</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div>
-
-<div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Undoing</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div>
-
-<p>The Cleaning</p>
-<div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Undoing</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div>
-
-<p>Insulation</p>
-<div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Undoing</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div>
-
-<p>Flooring</p>
-<div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Undoing</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div>
-<p>Sit & Sleep</p>
-<div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Undoing</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div>
-<p>Make It Your Own</p>
-<div style={styles.fade}>
-<div style={styles.fade2}>
-  <Header as='h3'>The Undoing</Header>
-  <p>Wow, KSL, you are amazing. We bought Stella on a hot Saturday afternoon for less than half of what we should have paid.</p>
-</div>
-</div> */}
