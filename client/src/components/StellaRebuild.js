@@ -3,7 +3,7 @@ import { Header, Step, Icon, Image, Segment, Button } from 'semantic-ui-react';
 import Options from './Options';
 
 class StellaRebuild extends React.Component {
-  state = { option: "", text: "" }
+  state = { option: "GettingStella", text: "" }
 
   setOption1 = () => {
     const { option } = this.state;

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Image } from 'semantic-ui-react';
+import pic1 from '../images/nav.png'
 
 class Options extends React.Component {
 
@@ -6,7 +8,11 @@ class Options extends React.Component {
     const { option } = this.props
     if (option == 'GettingStella') {
       return(
-        <div>GettingStella</div>
+        <div>
+          <Image size='medium' src={pic1} />
+          <p>Getting Stella</p>
+
+        </div>
       )
     }
     else if (option === "CleanOut") {
