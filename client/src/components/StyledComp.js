@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-// import Mountains from '../images/mountains.png';  
-  // background: url(${Mountains});
-  // background-repeat: no-repeat;
-  // background-size: cover;
+
 import Mountains from '../images/mountains.jpg'
 
 export const AppBackground = styled.div`
-  background: url(${Mountains}) no-repeat center; 
+  background: url(${Mountains}) no-repeat center;
+  height: 100vh;
+  overflow: scroll;
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 50px;
@@ -31,4 +30,11 @@ export const Header2 = styled.h2`
 export const Header4 = styled.h4`
   color: white;  
   text-align: center;
+`
+
+export const BackFade1 = styled.div`
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 1rem 0;
+  padding: 1em 1em;
+  border-radius: .28571429rem;
 `

@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { Header1 } from './StyledComp';
 
-class NoMatch extends Component {
-  render() {
-    return (
-      <Header as='h1' textAlign='center'>
-        Page Not Found
-        <Link to='/'> Home</Link>
-      </Header>
-    );
-  }
-}
+const NoMatch = () => (
+  <Header1>
+    Page Not Found
+    <Link to='/'> Home</Link>
+  </Header1>
+)
 
 export default NoMatch;
