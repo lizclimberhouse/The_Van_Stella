@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image } from 'semantic-ui-react';
-import pic1 from '../images/nav.png'
+import { Image, Segment, Header } from 'semantic-ui-react';
+import pic1 from '../images/nav.png';
+import pic2 from '../images/mountains2.jpg';
 
 class Options extends React.Component {
 
@@ -8,16 +9,66 @@ class Options extends React.Component {
     const { option } = this.props
     if (option == 'GettingStella') {
       return(
-        <div>
-          <Image size='medium' src={pic1} />
-          <p>Getting Stella</p>
-
-        </div>
+        <Segment>
+          <Header as='h2'>Getting Stella</Header>
+          <Image size='large' src={pic1} size='medium' floated='left' />
+          <p>
+            Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
+            est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
+            ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
+            ex natum rebum iisque. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+          </p>
+          <Image src={pic2} size='medium' floated='right' />
+          <p>
+            Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+          </p>
+          <p>
+            Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+            adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+            utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+            convenire mnesarchum eu per, quas minimum postulant per id. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+          </p>
+        </Segment>
       )
     }
     else if (option === "CleanOut") {
       return(
-        <div>CleanOut</div>
+        <Segment>
+          <Header as='h2'>Clean Out</Header>
+          <Image size='large' src={pic2} size='medium' floated='left' />
+          <p>
+            Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
+            est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
+            ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
+            ex natum rebum iisque. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+          </p>
+          <Image src={pic1} size='medium' floated='right' />
+          <p>
+            Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+          </p>
+          <p>
+            Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+            adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+            utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+            convenire mnesarchum eu per, quas minimum postulant per id. Te est latine definitiones. Quot wisi
+            nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+            fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+          </p>
+        </Segment>
       )
     }
     else {
