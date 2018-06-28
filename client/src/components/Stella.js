@@ -14,6 +14,7 @@ export class Stella extends React.Component {
           <Divider hidden />
         </Title>
         <StellaDetails />
+        <Divider hidden />
         <StellaRebuild />
       </Container>
     )
