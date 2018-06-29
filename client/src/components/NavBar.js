@@ -24,9 +24,10 @@ class NavBar extends Component {
       );
     }
     return (
-      <Menu.Menu position='right' verticalAlign='top'>
-        <Image src={van} style={styles.pic} />
-      </Menu.Menu>
+      null
+      // <Menu.Menu position='right' verticalAlign='top'>
+      //   <Image src={van} style={styles.pic} />
+      // </Menu.Menu>
       // <Menu.Menu position='right'>
       //   <Link to='/register'>
       //     <Menu.Item style={styles.navLinks} name='Register' />

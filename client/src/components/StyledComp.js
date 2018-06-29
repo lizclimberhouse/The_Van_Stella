@@ -35,12 +35,12 @@ export const Header4 = styled.h4`
 export const BackFade1 = styled.div`
   background-color: rgba(255, 255, 255, 0.4);
   margin: 1rem 0;
-  padding: 1em 1em;
+  padding: 1em 0;
   border-radius: .28571429rem;
 `
 export const BackFade2 = styled.div`
   background-color: rgba(255, 255, 255, 0.7);
   margin: 1rem 0;
-  padding: 1em 1em;
-  border-radius: .28571429rem;
+  padding: 1em 1rem;
+  border-radius: 0;
 `
