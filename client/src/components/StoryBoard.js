@@ -15,25 +15,11 @@ class StoryBoard extends React.Component {
     return(
       <div>
         { stories.map( story =>
-          <Story style={styles.boxSize} id={story.id} url={this.props.url} story={story} history={this.props.history} />
+          <Story id={story.id} url={this.props.url} story={story} history={this.props.history} />
         )}
       </div>
     )
   }
-}
-
-const styles = {
-  storyBox: {
-    padding: '50px',
-  },
-  images: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  imageSingle: {
-    width: '220px',
-  },
 }
 
 const mapStateToProps = (state) => {

@@ -3,6 +3,7 @@ import { Image, Segment, Header } from 'semantic-ui-react';
 import pic1 from '../images/mountains1.jpg';
 import pic2 from '../images/mountains.png';
 import pic3 from '../images/tree.png';
+import { BackFade2 } from './StyledComp';
 
 class StellaOptions extends React.Component {
 
@@ -10,7 +11,7 @@ class StellaOptions extends React.Component {
     const { option } = this.props
     if (option == 'GettingStella') {
       return(
-        <div style={styles.fade2}>
+        <BackFade2>
           <Header as='h2'>Getting Stella</Header>
           <Image size='large' src={pic1} size='small' floated='left' />
           <p>
@@ -40,12 +41,12 @@ class StellaOptions extends React.Component {
             nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
             fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
           </p>
-        </div>
+        </BackFade2>
       )
     }
     else if (option === "CleanOut") {
       return(
-        <div style={styles.fade2}>
+        <BackFade2>
           <Header as='h2'>Clean Out</Header>
           <Image size='large' src={pic3} size='small' floated='left' />
           <p>
@@ -72,12 +73,12 @@ class StellaOptions extends React.Component {
             nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
             fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
           </p>
-        </div>
+        </BackFade2>
       )
     }
     else {
       return(
-        <div style={styles.fade2}>
+        <BackFade2>
           <Header as='h2'>Rebuild</Header>
           <Image size='large' src={pic2} size='small' floated='left' />
           <p>
@@ -104,25 +105,9 @@ class StellaOptions extends React.Component {
             nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
             fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
           </p>
-        </div>
+        </BackFade2>
       )
     }
-  }
-}
-
-const styles = {
-
-  // fade: {
-  //   backgroundColor: "rgba(255, 255, 255, 0.4)",
-  //   margin: "1rem 0",
-  //   padding: "1em 1em",
-  //   borderRadius: ".28571429rem",
-  // },
-  fade2: {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
-    margin: "1rem 0",
-    padding: "1em 1em",
-    borderRadius: ".28571429rem",
   }
 }
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Header, Segment, Image, Button, Rating } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
 import StoryDelete from './StoryDelete';
+import { BackFade1, BackFade2 } from './StyledComp';
 
 class Story extends React.Component {
 
@@ -26,8 +27,8 @@ class Story extends React.Component {
     const { story, url } = this.props;
     const { showStoryForm, showDeleteCheck } = this.state;
     return(
-      <div style={styles.fade}>
-        <div style={styles.fade2}>
+      <BackFade1>
+        <BackFade2>
           <Header as='h3'>{story.title}</Header>
           <Rating icon='star' defaultRating={5} maxRating={5} />
           <Image src={story.image_one} size='small' floated='left' />
@@ -41,10 +42,9 @@ class Story extends React.Component {
           <p>
             {story.author}
           </p>
-        </div>
+        </BackFade2>
         { url ? 
-        <div style={styles.fade2}>
-        {/* <Segment> */}
+        <BackFade2>
           { showStoryForm || showDeleteCheck ?
             null
             :
@@ -69,28 +69,12 @@ class Story extends React.Component {
             :
             null
           }
-        {/* </Segment> */}
-        </div>
+        </BackFade2>
         :
         null
         }
-      </div>
+      </BackFade1>
     )
-  }
-}
-
-const styles = {
-  fade: {
-    backgroundColor: "rgba(255, 255, 255, 0.4)",
-    margin: "1rem 0",
-    padding: "1em 1em",
-    borderRadius: ".28571429rem",
-  },
-  fade2: {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
-    margin: "1rem 0",
-    padding: "1em 1em",
-    borderRadius: ".28571429rem",
   }
 }
 

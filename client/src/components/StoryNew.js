@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
 import StoryForm from './StoryForm';
-import { Title, Header1, Header4, DividerWhite } from './StyledComp';
+import { Title, Header1, Header4, DividerWhite, BackFade1, BackFade2 } from './StyledComp';
 
 export class StoryNew extends React.Component {
 
@@ -20,31 +20,16 @@ export class StoryNew extends React.Component {
             <Header1>Add New Story</Header1>
             <Header4><DividerWhite /></Header4>
           </Title>
-          <div style={styles.fade}>
-            <div style={styles.fade2}>
+          <BackFade1>
+            <BackFade2>
             <Link to="/profile"><Button color='yellow'>Cancel</Button></Link>
             <StoryForm history={this.props.history} />
-            </div>
-          </div>
+            </BackFade2>
+          </BackFade1>
         </Container>
       );
     }
   }
-
-const styles = {
-  fade: {
-    backgroundColor: "rgba(255, 255, 255, 0.4)",
-    margin: "1rem 0",
-    padding: "1em 1em",
-    borderRadius: ".28571429rem",
-  },
-  fade2: {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
-    margin: "1rem 0",
-    padding: "1em 1em",
-    borderRadius: ".28571429rem",
-  }
-}
 
 const mapStateToProps = (state) => {
   return { stories: state.stories }

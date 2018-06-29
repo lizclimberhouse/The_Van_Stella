@@ -48,31 +48,10 @@ class StellaRebuild extends React.Component {
             </Step.Content>
           </Step>
         </Step.Group>
-        <div>
-          <StellaOptions option={option} />
-        </div>
+        <StellaOptions option={option} />
       </BackFade1>
     )
   }
-}
-
-const styles = {
-  border: {
-    margin: "0",
-    border: "none",
-  },
-  // fade: {
-  //   backgroundColor: "rgba(255, 255, 255, 0.4)",
-  //   margin: "1rem 0",
-  //   padding: "1em 1em",
-  //   borderRadius: ".28571429rem",
-  // },
-  // // fade2: {
-  //   backgroundColor: "rgba(255, 255, 255, 0.7)",
-  //   margin: "1rem 0",
-  //   padding: "1em 1em",
-  //   borderRadius: ".28571429rem",
-  // }
 }
 
 export default StellaRebuild;
