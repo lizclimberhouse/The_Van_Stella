@@ -27,7 +27,7 @@ class StellaRebuild extends React.Component {
   render() {
     const { option } = this.state;
     return(
-      <BackFade1>
+      <div>
         <Step.Group stackable='tablet' widths={3}>
           <Step active={this.state.active1} onClick={this.setOption1}>
             <Icon name='cart' />
@@ -48,8 +48,10 @@ class StellaRebuild extends React.Component {
             </Step.Content>
           </Step>
         </Step.Group>
-        <StellaOptions option={option} />
-      </BackFade1>
+        <BackFade1>
+          <StellaOptions option={option} />
+        </BackFade1>
+      </div>
     )
   }
 }

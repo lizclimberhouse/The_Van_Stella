@@ -4,6 +4,7 @@ import { Header, Segment, Image, Button, Rating } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
 import StoryDelete from './StoryDelete';
 import { BackFade1, BackFade2 } from './StyledComp';
+import { Link } from 'react-router-dom';
 
 class Story extends React.Component {
 
@@ -30,7 +31,11 @@ class Story extends React.Component {
       <BackFade1>
         <BackFade2>
           <Header as='h3'>{story.title}</Header>
-          <Rating icon='star' defaultRating={5} maxRating={5} />
+          { url ? 
+          null
+          :
+          <Link to={`/stories/${story.id}/comment`}><Rating icon='star' defaultRating={5} maxRating={5} /></Link>
+          }
           <Image src={story.image_one} size='small' floated='left' />
           <p>
             {story.body_one}
