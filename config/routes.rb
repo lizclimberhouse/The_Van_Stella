@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'api/auth'
   namespace :api do
-    resources :stories
+    resources :stories do 
+      resources :comments 
+    end
     #API ROUTES SHOULD GO HERE
     get 'recent_stories', to: 'stories#recent_stories'
   end

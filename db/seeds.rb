@@ -17,6 +17,13 @@
     image_two: Faker::Avatar.image,
     image_three: Faker::Avatar.image,
   )
+  5.times do
+    Comment.create(
+      author: Faker::Name.name,
+      body: Faker::Lorem.sentence,
+      rating: rand(1..5),
+      story_id: rand(1..5),
+    )
 end
 
 puts "Seeded Database"

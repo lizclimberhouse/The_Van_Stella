@@ -15,7 +15,7 @@ class StoryBoard extends React.Component {
     return(
       <div>
         { stories.map( story =>
-          <StoryBox id={story.id} url={this.props.url} story={story} history={this.props.history} />
+          <StoryBox key={story.id} id={story.id} url={this.props.url} story={story} history={this.props.history} />
         )}
       </div>
     )

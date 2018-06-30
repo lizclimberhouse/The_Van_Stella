@@ -10,10 +10,17 @@ class StoryComment extends React.Component {
   state = { story: {} }
 
   componentDidMount() {
+    // console.log(this.props.match.params.id)
     const id = this.props.match.params.id  
     axios.get(`/api/stories/${id}`)
       .then( res => this.setState({ story: res.data })
     )}
+
+  navigateToPlace = () => {
+    // console.log('Navigate somewhere')
+    this.props.history.push('/archive')
+    // console.log(string) pass string back in to the ()
+  }
 
   render() {
     const { story } = this.state;
@@ -28,7 +35,7 @@ class StoryComment extends React.Component {
           <Story story={story} url={story.id}/>
         </BackFade1>
         <Divider hidden />
-        <AddComment />
+        <AddComment story={story} navigateToPlace={this.navigateToPlace} />
       </Container>
     )
   }

@@ -1,10 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Header, Segment, Image, Button, Rating } from 'semantic-ui-react';
 import StoryForm from './StoryForm';
 import StoryDelete from './StoryDelete';
 import { BackFade1, BackFade2 } from './StyledComp';
-import { Link } from 'react-router-dom';
 import Story from './Story';
 
 class StoryBox extends React.Component {
@@ -25,6 +23,7 @@ class StoryBox extends React.Component {
     })
   }
 
+  // TODO add a confirm from semantic ui react instead of the flash message
   render() {
     const { story, url } = this.props;
     const { showStoryForm, showDeleteCheck } = this.state;
@@ -66,4 +65,4 @@ class StoryBox extends React.Component {
   }
 }
 
-export default connect()(StoryBox);
+export default StoryBox;

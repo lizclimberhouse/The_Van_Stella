@@ -15,7 +15,7 @@ class RecentStories extends React.Component {
     return(
       <div>
         { stories.map( story =>
-          <StoryBox style={styles.boxSize} id={story.id} story={story} />
+          <StoryBox key={story.id} style={styles.boxSize} id={story.id} story={story} />
         )}
       </div>
     )
