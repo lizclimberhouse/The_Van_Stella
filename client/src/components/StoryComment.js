@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Header1, BackFade1, Title, Header4, DividerWhite } from './StyledComp';
 import { Divider, Container } from 'semantic-ui-react';
 import Story from './Story';
+import AddComment from './AddComment';
 
 class StoryComment extends React.Component {
 
@@ -24,8 +25,10 @@ class StoryComment extends React.Component {
           <Divider hidden />
         </Title>
         <BackFade1>
-          <Story story={story} />
+          <Story story={story} url={story.id}/>
         </BackFade1>
+        <Divider hidden />
+        <AddComment />
       </Container>
     )
   }

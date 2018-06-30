@@ -13,6 +13,7 @@ class Story extends React.Component {
           null
           :
           <Link to={`/stories/${story.id}/comment`}><Rating icon='star' defaultRating={5} maxRating={5} /></Link>
+          // TODO make the defaultRating above an average of all comments ratings.
           }
           <Image src={story.image_one} size='small' floated='left' />
           <p>
