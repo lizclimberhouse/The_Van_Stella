@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getStories } from '../actions/stories';
-import Story from './Story';
+import StoryBox from './StoryBox';
 
 class StoryBoard extends React.Component {
 
@@ -15,7 +15,7 @@ class StoryBoard extends React.Component {
     return(
       <div>
         { stories.map( story =>
-          <Story id={story.id} url={this.props.url} story={story} history={this.props.history} />
+          <StoryBox id={story.id} url={this.props.url} story={story} history={this.props.history} />
         )}
       </div>
     )

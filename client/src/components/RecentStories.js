@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getRecentStories } from '../actions/stories';
-import Story from './Story';
+import StoryBox from './StoryBox';
 
 class RecentStories extends React.Component {
 
@@ -15,7 +15,7 @@ class RecentStories extends React.Component {
     return(
       <div>
         { stories.map( story =>
-          <Story style={styles.boxSize} id={story.id} story={story} />
+          <StoryBox style={styles.boxSize} id={story.id} story={story} />
         )}
       </div>
     )

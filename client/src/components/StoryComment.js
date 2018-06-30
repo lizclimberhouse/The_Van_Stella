@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Header1 } from './StyledComp';
+import { Header1, BackFade1, Title, Header4, DividerWhite } from './StyledComp';
+import { Divider, Container } from 'semantic-ui-react';
+import Story from './Story';
 
 class StoryComment extends React.Component {
 
@@ -15,9 +17,16 @@ class StoryComment extends React.Component {
   render() {
     const { story } = this.state;
     return(
-      <div>
-        <Header1>StoryComment - {story.title} - story.body_one</Header1>
-      </div>
+      <Container>
+        <Title>
+          <Header1>StoryComment</Header1>
+          <Header4>2 humans<br/>1 dog<br/>+ a van<DividerWhite />weekend warriors</Header4>
+          <Divider hidden />
+        </Title>
+        <BackFade1>
+          <Story story={story} />
+        </BackFade1>
+      </Container>
     )
   }
 }
