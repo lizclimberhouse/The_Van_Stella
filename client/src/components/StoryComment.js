@@ -4,26 +4,31 @@ import { Header1, BackFade1, Title, Header4, DividerWhite } from './StyledComp';
 import { Divider, Container } from 'semantic-ui-react';
 import Story from './Story';
 import AddComment from './AddComment';
+import Comments from './Comments';
 
 class StoryComment extends React.Component {
 
-  state = { story: {} }
+  state = { story: {}, comments: {} }
 
   componentDidMount() {
-    // console.log(this.props.match.params.id)
     const id = this.props.match.params.id  
     axios.get(`/api/stories/${id}`)
       .then( res => this.setState({ story: res.data })
-    )}
+    )
+    axios.get(`/api/stories/${id}/comments`)
+    .then( res => {
+      this.setState({ comments: res.data })
+    })
+    }
 
   navigateToPlace = () => {
-    // console.log('Navigate somewhere')
+    // KEEP - console.log('Navigate somewhere')
     this.props.history.push('/archive')
-    // console.log(string) pass string back in to the ()
+    // KEEP - console.log(string) pass string back in to the ()
   }
 
   render() {
-    const { story } = this.state;
+    const { story, comments } = this.state;
     return(
       <Container>
         <Title>
@@ -36,6 +41,7 @@ class StoryComment extends React.Component {
         </BackFade1>
         <Divider hidden />
         <AddComment story={story} navigateToPlace={this.navigateToPlace} />
+        <Comments comments={comments} />
       </Container>
     )
   }
