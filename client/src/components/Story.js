@@ -12,10 +12,11 @@ class Story extends React.Component {
           { url ? 
           null
           :
-          <Link to={`/stories/${story.id}/comment`}><Rating icon='star' defaultRating={5} maxRating={5} /></Link>
+          <Link to={`/stories/${story.id}/comment`}>Story Comments</Link>
           // TODO make the defaultRating above an average of all comments ratings.
           }
           <Image src={story.image_one} size='small' floated='left' />
+          <Rating icon='star' defaultRating={5} maxRating={5} />
           <p>
             {story.body_one}
           </p>
