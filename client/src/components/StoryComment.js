@@ -41,7 +41,7 @@ class StoryComment extends React.Component {
         </BackFade1>
         <Divider hidden />
         <AddComment story={story} navigateToPlace={this.navigateToPlace} />
-        <Comments comments={comments} />
+        <Comments story={story} comments={comments} />
       </Container>
     )
   }

@@ -1,20 +1,36 @@
 import React from 'react';
-// import { connect } from 'react-redux';
-// import { getComments } from '../actions/comments';
+import { BackFade1 } from './StyledComp';
+import { connect } from 'react-redux';
+import { getComments } from '../actions/comments';
 // import { Header4 } from './StyledComp';
 // import axios from 'axios';
+import { Button } from 'semantic-ui-react';
+import CommentBox from './CommentBox';
 
 class Comments extends React.Component {
 
-  render() {
-    const { comments } = this.props;
+  getComments = (id) => {
+    const { dispatch } = this.props;
+    // debugger
+    dispatch(getComments(id))
+  }
+
+  render(){
+    const { comments, story } = this.props;
     return(
-      <div>
-        { comments ? <div>true</div> : <div>false</div>}
-      </div>
-      // TODO why can't I map over these? I have them, but I can't use them?
+      <BackFade1>
+        <div>{story.id}</div>
+        <Button color='yellow' onClick={() => this.getComments(story.id)}>See Comments</Button>
+        { comments.map( comment =>
+          <CommentBox key={comment.id} id={comment.id} comment={comment} />
+        )}
+      </BackFade1>
     )
   }
 }
 
-export default Comments;
+const mapStateToProps = (state) => {
+  return { comments: state.comments }
+}
+
+export default connect(mapStateToProps)(Comments);

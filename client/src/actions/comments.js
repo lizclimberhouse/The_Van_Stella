@@ -7,6 +7,7 @@ export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const getComments = (id) => {
   // debugger
   return (dispatch) => {
+    // debugger
     axios.get(`/api/stories/${id}/comments`)
       .then( res => dispatch({ type: COMMENTS, comments: res.data, headers: res.headers }))
   }
