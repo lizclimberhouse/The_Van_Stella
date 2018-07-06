@@ -4,10 +4,20 @@ import StoryForm from './StoryForm';
 import StoryDelete from './StoryDelete';
 import { BackFade1, BackFade2 } from './StyledComp';
 import Story from './Story';
+import axios from 'axios';
+import Comments from './Comments';
 
 class StoryBox extends React.Component {
 
-  state = { showStoryForm: false, showDeleteCheck: false }
+  state = { showStoryForm: false, showDeleteCheck: false, comments: {} }
+
+  componentDidMount() {
+    const { id } = this.props.story  
+    axios.get(`/api/stories/${id}/comments`)
+    .then( res => {
+      this.setState({ comments: res.data })
+    })
+    }
 
   toggleEdit = () => {
     const { showStoryForm } = this.state;
@@ -26,7 +36,7 @@ class StoryBox extends React.Component {
   // TODO add a confirm from semantic ui react instead of the flash message
   render() {
     const { story, url } = this.props;
-    const { showStoryForm, showDeleteCheck } = this.state;
+    const { showStoryForm, showDeleteCheck, comments } = this.state;
     return(
       <BackFade1>
         <Story story={story} url={url} />
@@ -56,6 +66,7 @@ class StoryBox extends React.Component {
             :
             null
           }
+          <Comments story={story} comments={comments} url="profile" />
         </BackFade2>
         :
         null

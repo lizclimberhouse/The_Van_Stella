@@ -22,15 +22,9 @@ class Comments extends React.Component {
         <div>{story.id}</div>
         <Button color='yellow' onClick={() => this.getComments(story.id)}>See Comments</Button>
         { comments.map( comment =>
-          <CommentBox key={comment.id} id={comment.id} comment={comment} />
+          <CommentBox key={comment.id} id={comment.id} comment={comment} url={this.props.url} />
         )}
-        { this.props.url == "profile" ? 
-        null
-        :
-        <div>
-          delete Button
-        </div>
-        }
+        
       </BackFade1>
     )
   }

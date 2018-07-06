@@ -15,6 +15,13 @@ class CommentBox extends React.Component {
           <p>
             {comment.body}
           </p>
+          { url ? 
+          <div>
+            delete Button
+          </div>
+          :
+          null
+          }
         </BackFade2>
     )
   }

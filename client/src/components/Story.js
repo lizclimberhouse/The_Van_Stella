@@ -28,7 +28,7 @@ class Story extends React.Component {
           :
           <div>
           <Link to={`/stories/${story.id}/comment`}>Story Comments</Link>
-          <Comments story={story} comments={comments} url={"profile"} />
+          <Comments story={story} comments={comments} />
           </div>
           // TODO make the defaultRating above an average of all comments ratings.
           }
