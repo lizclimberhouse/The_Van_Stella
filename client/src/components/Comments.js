@@ -24,6 +24,13 @@ class Comments extends React.Component {
         { comments.map( comment =>
           <CommentBox key={comment.id} id={comment.id} comment={comment} />
         )}
+        { this.props.url == "profile" ? 
+        null
+        :
+        <div>
+          delete Button
+        </div>
+        }
       </BackFade1>
     )
   }
