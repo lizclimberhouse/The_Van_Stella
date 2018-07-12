@@ -28,7 +28,7 @@ class Story extends React.Component {
           :
           <div>
             {/* See Story Details */}
-            <Comments story={story} comments={comments} />
+            {/* <Comments story={story} comments={comments} /> */}
           </div>
           // TODO make the defaultRating above an average of all comments ratings.
           }

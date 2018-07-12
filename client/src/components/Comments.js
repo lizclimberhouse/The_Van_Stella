@@ -1,5 +1,4 @@
 import React from 'react';
-import { BackFade1 } from './StyledComp';
 import { connect } from 'react-redux';
 import { getComments } from '../actions/comments';
 import { Button } from 'semantic-ui-react';
@@ -15,12 +14,12 @@ class Comments extends React.Component {
   render(){
     const { comments, story } = this.props;
     return(
-      <BackFade1>
+      <div>
         <Button color='yellow' onClick={() => this.getComments(story.id)}>Show Comments</Button>
         { comments.map( comment =>
           <CommentBox key={comment.id} id={story.id} comment={comment} url={this.props.url} />
         )}
-      </BackFade1>
+      </div>
     )
   }
 }

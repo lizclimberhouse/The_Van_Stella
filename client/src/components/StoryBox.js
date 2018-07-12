@@ -48,6 +48,9 @@ class StoryBox extends React.Component {
             <div>
               <Button color='yellow' onClick={this.toggleEdit}>Edit</Button>
               <Button color='red' onClick={this.toggleDeleteStory}>Delete</Button>
+              <br />
+              {/* TODO change this to inline button */}
+              <Comments story={story} comments={comments} url="profile" />
             </div>
           }
           { showStoryForm ? 
@@ -66,7 +69,6 @@ class StoryBox extends React.Component {
             :
             null
           }
-          <Comments story={story} comments={comments} url="profile" />
         </BackFade2>
         :
         null
