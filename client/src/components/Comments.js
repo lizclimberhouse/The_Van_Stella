@@ -16,7 +16,7 @@ class Comments extends React.Component {
     const { comments, story } = this.props;
     return(
       <BackFade1>
-        <Button color='yellow' onClick={() => this.getComments(story.id)}>See Comments</Button>
+        <Button color='yellow' onClick={() => this.getComments(story.id)}>Show Comments</Button>
         { comments.map( comment =>
           <CommentBox key={comment.id} id={story.id} comment={comment} url={this.props.url} />
         )}

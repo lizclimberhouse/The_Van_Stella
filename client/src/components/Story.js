@@ -22,13 +22,13 @@ class Story extends React.Component {
     const { comments } = this.state;
     return(
       <BackFade2>
-          <Header as='h3'>{story.title}</Header>
+          <Link to={`/stories/${story.id}/comment`}><Header as='h3'>{story.title}</Header></Link>
           { url ? 
           null
           :
           <div>
-          <Link to={`/stories/${story.id}/comment`}>Story Comments</Link>
-          <Comments story={story} comments={comments} />
+            {/* See Story Details */}
+            <Comments story={story} comments={comments} />
           </div>
           // TODO make the defaultRating above an average of all comments ratings.
           }
