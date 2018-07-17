@@ -6,18 +6,28 @@ import CommentBox from './CommentBox';
 
 class Comments extends React.Component {
 
+  state = {showComments: false}
+
   getComments = (id) => {
     const { dispatch } = this.props;
     dispatch(getComments(id))
+  }
+
+  toggleComments = (id) => {
+    const { showComments } = this.state;
+    this.setState( state => {
+      return { showComments: !showComments }
+    })
+    this.getComments(id)
   }
 
   render(){
     const { comments, story } = this.props;
     return(
       <div>
-        <Button color='yellow' onClick={() => this.getComments(story.id)}>Show Comments</Button>
+        <Button color='yellow' onClick={() => this.toggleComments(story.id)}>Show Comments</Button>
         { comments.map( comment =>
-          <CommentBox key={comment.id} id={story.id} comment={comment} url={this.props.url} />
+          this.state.showComments ? <CommentBox key={comment.id} id={story.id} comment={comment} url={this.props.url} /> : null
         )}
       </div>
     )

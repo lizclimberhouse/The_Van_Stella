@@ -17,7 +17,7 @@ class StoryBox extends React.Component {
     .then( res => {
       this.setState({ comments: res.data })
     })
-    }
+  }
 
   toggleEdit = () => {
     const { showStoryForm } = this.state;
