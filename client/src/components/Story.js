@@ -23,14 +23,7 @@ class Story extends React.Component {
     return(
       <BackFade2>
           <Link to={`/stories/${story.id}/comment`}><Header as='h3'>{story.title}</Header></Link>
-          { url ? 
-          null
-          :
-          <div>
-            {/* See Story Details */}
-            {/* <Comments story={story} comments={comments} /> */}
-          </div>
-          // TODO make the defaultRating above an average of all comments ratings.
+          {/* TODO make the defaultRating above an average of all comments ratings. */}
           }
           <Image src={story.image_one} size='small' floated='left' />
           <Rating icon='star' defaultRating={5} maxRating={5} />

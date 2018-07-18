@@ -24,7 +24,6 @@ class AddComment extends React.Component {
   handleRate = (e, { rating, maxRating }) => this.setState({ rating, maxRating })
 
   handleSubmit = (e) => {
-    // debugger
     e.preventDefault()
     const story_id = this.props.story.id
     console.log(story_id)
@@ -32,9 +31,7 @@ class AddComment extends React.Component {
     const { dispatch } = this.props
     dispatch(addComment(comment))
     dispatch(setFlash( 'Comment Submitted', 'green'))
-    // this.props.history.push('/archive')
     this.props.navigateToPlace()
-    // to pass something back to the parent comp. put 'a string' in the ()
   }
 
   render() {
