@@ -18,26 +18,24 @@ class Story extends React.Component {
     }
     
   render() {
-    const { story, url } = this.props;
-    const { comments } = this.state;
+    const { story } = this.props;
     return(
       <BackFade2>
-          <Link to={`/stories/${story.id}/comment`}><Header as='h3'>{story.title}</Header></Link>
-          {/* TODO make the defaultRating above an average of all comments ratings. */}
-          }
-          <Image src={story.image_one} size='small' floated='left' />
-          <Rating icon='star' defaultRating={5} maxRating={5} />
-          <p>
-            {story.body_one}
-          </p>
-          <Image src={story.image_two} size='small' floated='right' />
-          <p>
-            {story.body_two}
-          </p>
-          <p>
-            {story.author}
-          </p>
-        </BackFade2>
+        <Link to={`/stories/${story.id}/comment`}><Header as='h3'>{story.title}</Header></Link>
+        {/* TODO make the defaultRating above an average of all comments ratings. */}
+        <Image src={story.image_one} size='small' floated='left' />
+        <Rating icon='star' defaultRating={5} maxRating={5} />
+        <p>
+          {story.body_one}
+        </p>
+        <Image src={story.image_two} size='small' floated='right' />
+        <p>
+          {story.body_two}
+        </p>
+        <p>
+          {story.author}
+        </p>
+      </BackFade2>
     )
   }
 }

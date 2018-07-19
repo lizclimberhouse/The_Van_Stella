@@ -18,18 +18,18 @@ class CommentBox extends React.Component {
     const { comment, url, id } = this.props;
     return(
       <BackFade2>
-          <Header as='h3'>{comment.author}</Header>
-          <p>
-            {comment.body}
-          </p>
-          { url ? 
-          <div>
-            <Button color='red' onClick={() => this.deleteComment(comment.id, id)}>Delete</Button>
-          </div>
-          :
-          null
-          }
-        </BackFade2>
+        <Header as='h3'>{comment.author}</Header>
+        <p>
+          {comment.body}
+        </p>
+        { url ? 
+        <div>
+          <Button color='red' onClick={() => this.deleteComment(comment.id, id)}>Delete</Button>
+        </div>
+        :
+        null
+        }
+      </BackFade2>
     )
   }
 }

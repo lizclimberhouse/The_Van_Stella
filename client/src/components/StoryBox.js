@@ -5,7 +5,7 @@ import StoryDelete from './StoryDelete';
 import { BackFade1, BackFade2 } from './StyledComp';
 import Story from './Story';
 import axios from 'axios';
-import Comments from './Comments';
+import EditComments from './EditComments';
 
 class StoryBox extends React.Component {
 
@@ -50,7 +50,7 @@ class StoryBox extends React.Component {
               <Button color='red' onClick={this.toggleDeleteStory}>Delete</Button>
               <br />
               {/* TODO change this to inline button */}
-              <Comments story={story} comments={comments} url="profile" />
+              <EditComments story={story} comments={comments} url="profile" />
             </div>
           }
           { showStoryForm ? 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header4, BackFade2 } from './StyledComp';
+import { Header4, BackFade2, BackFade1 } from './StyledComp';
 import { Rating, Form } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { setFlash } from '../actions/flash';
@@ -37,36 +37,38 @@ class AddComment extends React.Component {
   render() {
     const { author, body } = this.state;
     return(
-      <BackFade2>
-        <Header4>AddComment</Header4>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group>
-            <Form.Input
-              width='6'
-              name="author"
-              label="Author"
-              defaultValue={author}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input
-              width='10'
-              name="body"
-              label="Body"
-              defaultValue={body}
-              onChange={this.handleChange}
-            />
-            <Rating 
-              icon='star' 
-              maxRating={5} 
-              onRate={this.handleRate} 
-              defaultRating={this.state.rating}
-              required
-            />
-            <Form.Button color='green'>Submit</Form.Button>
-          </Form.Group>
-        </Form>
-      </BackFade2>
+      <BackFade1>
+        <BackFade2>
+          <Header4>AddComment</Header4>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group>
+              <Form.Input
+                width='6'
+                name="author"
+                label="Author"
+                defaultValue={author}
+                onChange={this.handleChange}
+                required
+              />
+              <Form.Input
+                width='10'
+                name="body"
+                label="Body"
+                defaultValue={body}
+                onChange={this.handleChange}
+              />
+              <Rating 
+                icon='star' 
+                maxRating={5} 
+                onRate={this.handleRate} 
+                defaultRating={this.state.rating}
+                required
+              />
+              <Form.Button color='green'>Submit</Form.Button>
+            </Form.Group>
+          </Form>
+        </BackFade2>
+      </BackFade1>
       // TODO defaultRating will come from an average at some point.
       // TODO create comments controller that belongs to a story
       // TODO create add comment ability from non-logged in user. Add only.
