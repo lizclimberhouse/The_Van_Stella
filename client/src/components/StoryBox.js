@@ -49,8 +49,8 @@ class StoryBox extends React.Component {
               <Button color='yellow' onClick={this.toggleEdit}>Edit</Button>
               <Button color='red' onClick={this.toggleDeleteStory}>Delete</Button>
               <br />
-              {/* TODO change this to inline button */}
               <EditComments story={story} comments={comments} url="profile" />
+              {/* TODO change this so the Fade's dont over lap on the profile page. */}
             </div>
           }
           { showStoryForm ? 
