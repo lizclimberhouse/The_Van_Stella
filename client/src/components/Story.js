@@ -10,18 +10,19 @@ class Story extends React.Component {
   state = { story: {}, comments: {} }
 
   componentDidMount() {
-    const { id } = this.props.story
-    axios.get(`/api/stories/${id}/comments`)
+    const { story } = this.props
+    axios.get(`/api/stories/${story.id}/comments`)
     .then( res => {
       this.setState({ comments: res.data })
     })
-    }
+  }
     
   render() {
     const { story } = this.props;
     return(
       <BackFade2>
-        <Link to={`/stories/${story.id}/comment`}><Header as='h3'>{story.title}</Header></Link>
+        <Link to={`/stories/${story.id}/comments`}><Header as='h3'>{story.title}</Header></Link>
+         {/* TODO for some reason the story id isn't transerfing and I;m getting a 404 error. Need to trace it back */}
         {/* TODO make the defaultRating above an average of all comments ratings. */}
         <Image src={story.image_one} size='small' floated='left' />
         <Rating icon='star' defaultRating={5} maxRating={5} />

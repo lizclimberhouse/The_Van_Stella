@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/stella' component={Stella} />
             <Route exact path='/archive' component={Archive} />
-            <Route exact path='/stories/:id/comment' component={StoryComment} />
+            <Route exact path='/stories/:id/comments' component={StoryComment} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <ProtectedRoute exact path='/profile' component={Profile} />
