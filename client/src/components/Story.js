@@ -9,6 +9,8 @@ class Story extends React.Component {
 
   state = { story: {}, comments: {} }
 
+  // Need to figure out whay I get all comments for each story instead of only it's comments.?\
+  
   componentDidMount() {
     const { story } = this.props
     axios.get(`/api/stories/${story.id}/comments`)
