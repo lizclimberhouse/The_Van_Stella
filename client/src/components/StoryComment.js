@@ -8,17 +8,13 @@ import Comments from './Comments';
 
 class StoryComment extends React.Component {
 
-  state = { story: {}, comments: {} }
+  state = { story: {}}
 
   componentDidMount() {
-    const id = this.props.match.params.id  
+    const id = this.props.match.params.id
     axios.get(`/api/stories/${id}`)
       .then( res => this.setState({ story: res.data })
     )
-    axios.get(`/api/stories/${id}/comments`)
-    .then( res => {
-      this.setState({ comments: res.data })
-    })
     }
 
   navigateToPlace = () => {

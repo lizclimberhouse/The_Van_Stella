@@ -4,7 +4,7 @@ class Api::CommentsController < ApplicationController
   
   def index
     story_id = @story.id
-    render json: Comment.all.order(created_at: :desc)
+    render json: Comment.where("story_id = '#{story_id}'").order(created_at: :desc)
   end
 
   def show

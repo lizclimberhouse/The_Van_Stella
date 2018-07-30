@@ -11,14 +11,6 @@ class StoryBox extends React.Component {
 
   state = { showStoryForm: false, showDeleteCheck: false, comments: {} }
 
-  componentDidMount() {
-    const { id } = this.props.story  
-    axios.get(`/api/stories/${id}/comments`)
-    .then( res => {
-      this.setState({ comments: res.data })
-    })
-  }
-
   toggleEdit = () => {
     const { showStoryForm } = this.state;
     this.setState( state => {
