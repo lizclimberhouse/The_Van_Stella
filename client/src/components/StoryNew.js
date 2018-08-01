@@ -1,15 +1,15 @@
-import React from 'react';
-import { Container, Segment, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getStories } from '../actions/stories';
-import StoryForm from './StoryForm';
-import { Title, Header1, Header4, DividerWhite, BackFade1, BackFade2 } from './StyledComp';
+import React from 'react'
+import { Container, Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { getStories } from '../actions/stories'
+import StoryForm from './StoryForm'
+import { Title, Header1, Header4, DividerWhite, BackFade1, BackFade2 } from './StyledComp'
 
 export class StoryNew extends React.Component {
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { dispatch } = this.props
     dispatch(getStories())
   }
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import Mountains from '../images/mountains.jpg'
 

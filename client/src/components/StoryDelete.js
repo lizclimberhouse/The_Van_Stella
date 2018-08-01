@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Button } from 'semantic-ui-react';
-import { deleteStory } from '../actions/stories';
-import { setFlash } from '../actions/flash';
+import React from 'react'
+import { connect } from 'react-redux'
+import { Button } from 'semantic-ui-react'
+import { deleteStory } from '../actions/stories'
+import { setFlash } from '../actions/flash'
 
 class StoryDelete extends React.Component {
 
@@ -14,7 +14,7 @@ class StoryDelete extends React.Component {
   }
 
   render() {
-    const { id } = this.props;
+    const { id } = this.props
     return(
       <div>
         <br />

@@ -1,10 +1,10 @@
-import React from 'react';
-import axios from 'axios';
-import { Header1, BackFade1, Title, Header4, DividerWhite } from './StyledComp';
-import { Divider, Container } from 'semantic-ui-react';
-import Story from './Story';
-import AddComment from './AddComment';
-import Comments from './Comments';
+import React from 'react'
+import axios from 'axios'
+import { Header1, BackFade1, Title, Header4, DividerWhite } from './StyledComp'
+import { Divider, Container } from 'semantic-ui-react'
+import Story from './Story'
+import AddComment from './AddComment'
+import Comments from './Comments'
 
 class StoryComment extends React.Component {
 
@@ -15,7 +15,7 @@ class StoryComment extends React.Component {
     axios.get(`/api/stories/${id}`)
       .then( res => this.setState({ story: res.data })
     )
-    }
+  }
 
   navigateToPlace = () => {
     // KEEP - console.log('Navigate somewhere')
@@ -24,7 +24,7 @@ class StoryComment extends React.Component {
   }
 
   render() {
-    const { story, comments } = this.state;
+    const { story, comments } = this.state
     return(
       <Container>
         <Title>

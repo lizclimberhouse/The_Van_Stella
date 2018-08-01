@@ -1,8 +1,8 @@
-import React from 'react';
-import { Form } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { addStory, updateStory } from '../actions/stories';
-import { setFlash } from '../actions/flash';
+import React from 'react'
+import { Form } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { addStory, updateStory } from '../actions/stories'
+import { setFlash } from '../actions/flash'
 
 class StoryForm extends React.Component {
 
@@ -41,7 +41,7 @@ class StoryForm extends React.Component {
   }
 
   render() {
-    const { title, body_one, body_two, body_three, author, image_one, image_two, image_three } = this.props;
+    const { title, body_one, body_two, body_three, author, image_one, image_two, image_three } = this.props
     return(
       <div>
         <br />
