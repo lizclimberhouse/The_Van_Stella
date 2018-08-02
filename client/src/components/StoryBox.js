@@ -1,25 +1,24 @@
-import React from 'react';
-import { Header, Segment, Image, Button, Rating } from 'semantic-ui-react';
-import StoryForm from './StoryForm';
-import StoryDelete from './StoryDelete';
-import { BackFade1, BackFade2 } from './StyledComp';
-import Story from './Story';
-import axios from 'axios';
-import EditComments from './EditComments';
+import React from 'react'
+import { Button } from 'semantic-ui-react'
+import StoryForm from './StoryForm'
+import StoryDelete from './StoryDelete'
+import { BackFade1, BackFade2 } from './StyledComp'
+import Story from './Story'
+import EditComments from './EditComments'
 
 class StoryBox extends React.Component {
 
   state = { showStoryForm: false, showDeleteCheck: false, comments: {} }
 
   toggleEdit = () => {
-    const { showStoryForm } = this.state;
+    const { showStoryForm } = this.state
     this.setState( state => {
       return { showStoryForm: !showStoryForm }
     })
   }
 
   toggleDeleteStory = () => {
-    const { showDeleteCheck } = this.state;
+    const { showDeleteCheck } = this.state
     this.setState( state => {
       return { showDeleteCheck: !showDeleteCheck }
     })
@@ -27,8 +26,8 @@ class StoryBox extends React.Component {
 
   // TODO add a confirm from semantic ui react instead of the flash message
   render() {
-    const { story, url } = this.props;
-    const { showStoryForm, showDeleteCheck, comments } = this.state;
+    const { story, url } = this.props
+    const { showStoryForm, showDeleteCheck, comments } = this.state
     return(
       <BackFade1>
         <Story story={story} url={url} />
@@ -70,4 +69,4 @@ class StoryBox extends React.Component {
   }
 }
 
-export default StoryBox;
+export default StoryBox

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Step, Icon } from 'semantic-ui-react';
-import StellaOptions from './StellaOptions';
-import { BackFade1 } from './StyledComp';
+import React from 'react'
+import { Step, Icon } from 'semantic-ui-react'
+import StellaOptions from './StellaOptions'
+import { BackFade1 } from './StyledComp'
 
 class StellaRebuild extends React.Component {
   state = { option: "GettingStella", text: "", active1: true, active2: false, active3: false }
@@ -25,7 +25,7 @@ class StellaRebuild extends React.Component {
   }
 
   render() {
-    const { option } = this.state;
+    const { option } = this.state
     return(
       <div>
         <Step.Group stackable='tablet' widths={3}>
@@ -56,4 +56,4 @@ class StellaRebuild extends React.Component {
   }
 }
 
-export default StellaRebuild;
+export default StellaRebuild

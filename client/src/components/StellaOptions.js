@@ -1,9 +1,9 @@
-import React from 'react';
-import { Image, Segment, Header } from 'semantic-ui-react';
-import pic1 from '../images/mountains1.jpg';
-import pic2 from '../images/mountains.png';
-import pic3 from '../images/tree.png';
-import { BackFade2 } from './StyledComp';
+import React from 'react'
+import { Image, Header } from 'semantic-ui-react'
+import pic1 from '../images/mountains1.jpg'
+import pic2 from '../images/mountains.png'
+import pic3 from '../images/tree.png'
+import { BackFade2 } from './StyledComp'
 
 class StellaOptions extends React.Component {
 
@@ -111,4 +111,4 @@ class StellaOptions extends React.Component {
   }
 }
 
-export default StellaOptions;
+export default StellaOptions

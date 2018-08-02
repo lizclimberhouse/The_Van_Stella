@@ -1,16 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Image, Header, Rating } from 'semantic-ui-react';
-import { BackFade2 } from './StyledComp';
-import Comments from './Comments';
-import axios from 'axios';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Image, Header, Rating } from 'semantic-ui-react'
+import { BackFade2 } from './StyledComp'
+import axios from 'axios'
 
 class Story extends React.Component {
 
   state = { story: {}, comments: {} }
 
   // Need to figure out whay I get all comments for each story instead of only it's comments.?\
-  
+
   componentDidMount() {
     const { story } = this.props
     axios.get(`/api/stories/${story.id}/comments`)
@@ -20,7 +19,7 @@ class Story extends React.Component {
   }
     
   render() {
-    const { story } = this.props;
+    const { story } = this.props
     return(
       <BackFade2>
         <Link to={`/stories/${story.id}/comments`}><Header as='h3'>{story.title}</Header></Link>
@@ -43,4 +42,4 @@ class Story extends React.Component {
   }
 }
 
-export default Story;
+export default Story

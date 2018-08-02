@@ -1,17 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { getStories } from '../actions/stories';
-import StoryBox from './StoryBox';
+import React from 'react'
+import { connect } from 'react-redux'
+import { getStories } from '../actions/stories'
+import StoryBox from './StoryBox'
 
 class StoryBoard extends React.Component {
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { dispatch } = this.props
     dispatch(getStories())
   }
 
   render(){
-    const { stories } = this.props;
+    const { stories } = this.props
     return(
       <div>
         { stories.map( story =>
@@ -26,4 +26,4 @@ const mapStateToProps = (state) => {
   return { stories: state.stories }
 }
 
-export default connect(mapStateToProps)(StoryBoard);
+export default connect(mapStateToProps)(StoryBoard)
