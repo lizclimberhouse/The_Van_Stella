@@ -1,17 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { getRecentStories } from '../actions/stories';
-import StoryBox from './StoryBox';
+import React from 'react'
+import { connect } from 'react-redux'
+import { getRecentStories } from '../actions/stories'
+import StoryBox from './StoryBox'
 
 class RecentStories extends React.Component {
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { dispatch } = this.props
     dispatch(getRecentStories())
   }
 
   render() {
-    const { stories } = this.props;
+    const { stories } = this.props
     return(
       <div>
         { stories.map( story =>
@@ -41,4 +41,4 @@ const mapStateToProps = (state) => {
   return { stories: state.stories }
 }
 
-export default connect(mapStateToProps)(RecentStories);
+export default connect(mapStateToProps)(RecentStories)

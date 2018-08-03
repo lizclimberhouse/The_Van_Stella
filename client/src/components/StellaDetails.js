@@ -1,5 +1,5 @@
-import React from 'react';
-import { Icon, Statistic } from 'semantic-ui-react';
+import React from 'react'
+import { Icon, Statistic } from 'semantic-ui-react'
 
 const StellaDetails = () => (
   <Statistic.Group widths='five'>
@@ -44,4 +44,4 @@ const styles = {
   },
 }
 
-export default StellaDetails;
+export default StellaDetails

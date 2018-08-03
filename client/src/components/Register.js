@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import { Header, Form, Button, Segment } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { registerUser } from '../actions/auth';
-import { setFlash } from '../actions/flash';
-import { Header1 } from './StyledComp';
+import React, { Component } from 'react'
+import { Header, Form, Button, Segment } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { registerUser } from '../actions/auth'
+import { setFlash } from '../actions/flash'
+import { Header1 } from './StyledComp'
 class Register extends Component {
-  state = { email: '', password: '', passwordConfirmation: '' };
+  state = { email: '', password: '', passwordConfirmation: '' }
 
   handleSubmit = event => {
-    event.preventDefault();
-    const { email, password, passwordConfirmation } = this.state;
-    const { dispatch, history } = this.props;
+    event.preventDefault()
+    const { email, password, passwordConfirmation } = this.state
+    const { dispatch, history } = this.props
     if (password === passwordConfirmation) {
-      dispatch(registerUser(email, password, passwordConfirmation, history));
-    } else dispatch(setFlash('Passwords do not match!, please try again', 'red'));
+      dispatch(registerUser(email, password, passwordConfirmation, history))
+    } else dispatch(setFlash('Passwords do not match!, please try again', 'red'))
   }
 
   handleChange = event => {
     // use e to grab the id off the element also the value and set state
     // const { id, value } = event.target;
-    const id = event.target.id;
-    const value = event.target.value;
-    this.setState({ [id]: value });
+    const id = event.target.id
+    const value = event.target.value
+    this.setState({ [id]: value })
   }
 
   render() {
-    const { email, password, passwordConfirmation } = this.state;
+    const { email, password, passwordConfirmation } = this.state
 
     return (
       <Segment basic>
@@ -72,4 +72,4 @@ class Register extends Component {
   }
 }
 
-export default connect()(Register);
+export default connect()(Register)

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Divider } from 'semantic-ui-react';
-import { Title, Header1, Header4, DividerWhite } from './StyledComp';
-import StellaDetails from './StellaDetails';
-import StellaRebuild from './StellaRebuild';
+import React from 'react'
+import { Container, Divider } from 'semantic-ui-react'
+import { Title, Header1, Header4, DividerWhite } from './StyledComp'
+import StellaDetails from './StellaDetails'
+import StellaRebuild from './StellaRebuild'
 
 const Stella = () => (
   <Container>
@@ -17,4 +17,4 @@ const Stella = () => (
   </Container>
 )
 
-export default Stella;
+export default Stella

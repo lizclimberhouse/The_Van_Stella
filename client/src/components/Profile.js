@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Button, Divider } from 'semantic-ui-react';
-import StoryBoard from './StoryBoard';
-import { Link } from 'react-router-dom';
-import { Title, Header1, Header4, DividerWhite } from './StyledComp';
+import React from 'react'
+import { Container, Button, Divider } from 'semantic-ui-react'
+import StoryBoard from './StoryBoard'
+import { Link } from 'react-router-dom'
+import { Title, Header1, Header4, DividerWhite } from './StyledComp'
 
 class Profile extends React.Component {
   render() {
@@ -22,4 +22,4 @@ class Profile extends React.Component {
   }
 }
 
-export default Profile;
+export default Profile
