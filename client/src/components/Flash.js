@@ -1,35 +1,35 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Message, Container, Header } from 'semantic-ui-react';
-import { clearFlash } from '../actions/flash';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Message, Container, Header } from 'semantic-ui-react'
+import { clearFlash } from '../actions/flash'
+import { withRouter } from 'react-router-dom'
 
 class Flash extends Component { 
   componentDidUpdate(prevProps) {
-    const { location: prevLocation, flash: prevFlash } = prevProps;
-    const { location, flash, dispatch } = this.props;
+    const { location: prevLocation, flash: prevFlash } = prevProps
+    const { location, flash, dispatch } = this.props
     
-    const prevMessage = prevFlash.message;
-    const prevUrl = prevLocation.pathname;
-    const currentMessage = flash.message;
-    const currentUrl = location.pathname;
+    const prevMessage = prevFlash.message
+    const prevUrl = prevLocation.pathname
+    const currentMessage = flash.message
+    const currentUrl = location.pathname
 
     if(prevMessage && prevMessage === currentMessage) {
       if(prevUrl !== currentUrl) {
-        clearTimeout(this.flashTimeout);
-        dispatch(clearFlash());
+        clearTimeout(this.flashTimeout)
+        dispatch(clearFlash())
       }
     }
   }
 
   fadeFlash = dispatch => {
     setTimeout(() => {
-      dispatch(clearFlash());
-    }, 15000);
+      dispatch(clearFlash())
+    }, 15000)
   }
 
   render() {
-    const { dispatch, flash: { message, color } } = this.props;
+    const { dispatch, flash: { message, color } } = this.props
 
     if (message) {
       return (
@@ -49,8 +49,8 @@ class Flash extends Component {
 }
 
 const mapStateToProps = state => {
-  const { flash } = state;
-  return { flash };
+  const { flash } = state
+  return { flash }
 };
 
-export default withRouter(connect(mapStateToProps)(Flash));
+export default withRouter(connect(mapStateToProps)(Flash))

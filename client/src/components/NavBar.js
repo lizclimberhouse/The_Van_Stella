@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Menu, Container, Image, MenuMenu } from 'semantic-ui-react';
-import { Link, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { handleLogout } from '../actions/auth';
+import React, { Component } from 'react'
+import { Menu, Container, Image, MenuMenu } from 'semantic-ui-react'
+import { Link, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { handleLogout } from '../actions/auth'
 import van from '../images/van.png'
 
 class NavBar extends Component {
   rightNavs = () => {
-    const { user, dispatch, history } = this.props;
+    const { user, dispatch, history } = this.props
 
     if (user.id) {
       return (
@@ -73,7 +73,7 @@ const styles = {
 }
 
 const mapStateToProps = state => {
-  return { user: state.user };
+  return { user: state.user }
 };
 
-export default withRouter(connect(mapStateToProps)(NavBar));
+export default withRouter(connect(mapStateToProps)(NavBar))

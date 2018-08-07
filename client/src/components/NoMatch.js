@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Header } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { Header1 } from './StyledComp';
+import React, { Component } from 'react'
+import { Header } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { Header1 } from './StyledComp'
 
 const NoMatch = () => (
   <Header1>
@@ -10,4 +10,4 @@ const NoMatch = () => (
   </Header1>
 )
 
-export default NoMatch;
+export default NoMatch

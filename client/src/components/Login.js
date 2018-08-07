@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
-import { Header, Segment, Form, Button } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { handleLogin } from '../actions/auth';
-import { Header1 } from './StyledComp';
+import React, { Component } from 'react'
+import { Header, Segment, Form, Button } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { handleLogin } from '../actions/auth'
+import { Header1 } from './StyledComp'
 import Mountains from '../images/mountains.jpg'
 
 class Login extends Component {
-  state = { email: '', password: '' };
+  state = { email: '', password: '' }
 
   handleChange = event => {
-    const { id, value } = event.target;
-    this.setState({ [id]: value });
+    const { id, value } = event.target
+    this.setState({ [id]: value })
   }
 
   handleSubmit = event => {
-    event.preventDefault();
-    const { dispatch, history } = this.props;
-    const { email, password } = this.state;
-    dispatch(handleLogin(email, password, history));
+    event.preventDefault()
+    const { dispatch, history } = this.props
+    const { email, password } = this.state
+    dispatch(handleLogin(email, password, history))
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password } = this.state
     return (
       <Segment basic>
         <Header1>Login</Header1>
@@ -56,4 +56,4 @@ class Login extends Component {
   }
 }
 
-export default connect()(Login);
+export default connect()(Login)

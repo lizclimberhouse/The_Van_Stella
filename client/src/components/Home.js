@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Container, Divider } from 'semantic-ui-react';
-import { Title, Header1, Header4, DividerWhite } from './StyledComp';
-import RecentStories from './RecentStories';
+import React, { Component } from 'react'
+import { Container, Divider } from 'semantic-ui-react'
+import { Title, Header1, Header4, DividerWhite } from './StyledComp'
+import RecentStories from './RecentStories'
 
 const Home = () => (
   <Container>
@@ -13,4 +13,4 @@ const Home = () => (
     <RecentStories/>
   </Container>
 )
-export default Home;
+export default Home
