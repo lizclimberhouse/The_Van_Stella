@@ -1,5 +1,5 @@
-import React from 'react';
-import { Segment, Loader } from 'semantic-ui-react';
+import React from 'react'
+import { Segment, Loader } from 'semantic-ui-react'
 
 const ComponentLoader = ({ loaded, message, children }) => {
   if(loaded)
@@ -12,4 +12,4 @@ const ComponentLoader = ({ loaded, message, children }) => {
     )
 }
 
-export default ComponentLoader;
+export default ComponentLoader

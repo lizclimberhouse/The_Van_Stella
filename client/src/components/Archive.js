@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container, Divider } from 'semantic-ui-react';
-import { Title, Header1, Header4, DividerWhite } from './StyledComp';
-import StoryBoard from './StoryBoard';
+import React from 'react'
+import { Container, Divider } from 'semantic-ui-react'
+import { Title, Header1, Header4, DividerWhite } from './StyledComp'
+import StoryBoard from './StoryBoard'
 
 const Archive = () => (
   <Container>
@@ -14,4 +14,4 @@ const Archive = () => (
   </Container>
 )
 
-export default Archive;
+export default Archive
