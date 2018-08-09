@@ -1,9 +1,9 @@
-import React from 'react';
-import { Header4, BackFade2, BackFade1 } from './StyledComp';
-import { Rating, Form } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { setFlash } from '../actions/flash';
-import { addComment } from '../actions/comments';
+import React from 'react'
+import { Header4, BackFade2, BackFade1 } from './StyledComp'
+import { Rating, Form } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { setFlash } from '../actions/flash'
+import { addComment } from '../actions/comments'
 
 
 class AddComment extends React.Component {
@@ -35,7 +35,7 @@ class AddComment extends React.Component {
   }
 
   render() {
-    const { author, body } = this.state;
+    const { author, body } = this.state
     return(
       <BackFade1>
         <BackFade2>
@@ -83,4 +83,4 @@ const mapStateToProps = (state) => {
   return { comment: state.comment }
 }
 
-export default connect(mapStateToProps)(AddComment);
+export default connect(mapStateToProps)(AddComment)

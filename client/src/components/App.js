@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import NoMatch from './NoMatch';
-import NavBar from './NavBar';
-import Login from './Login';
-import Register from './Register';
-import Flash from './Flash';
-import Home from './Home';
-import ProtectedRoute from './ProtectedRoute';
-import AuthRoute from './AuthRoute';
-import FetchUser from './FetchUser';
-import { Switch, Route } from 'react-router-dom';
-import Stella from './Stella';
-import Profile from './Profile';
-import StoryNew from './StoryNew';
-import { AppBackground } from './StyledComp';
-import Archive from './Archive';
-import StoryComment from './StoryComment';
+import React, { Component } from 'react'
+import NoMatch from './NoMatch'
+import NavBar from './NavBar'
+import Login from './Login'
+import Register from './Register'
+import Flash from './Flash'
+import Home from './Home'
+import ProtectedRoute from './ProtectedRoute'
+import AuthRoute from './AuthRoute'
+import FetchUser from './FetchUser'
+import { Switch, Route } from 'react-router-dom'
+import Stella from './Stella'
+import Profile from './Profile'
+import StoryNew from './StoryNew'
+import { AppBackground } from './StyledComp'
+import Archive from './Archive'
+import StoryComment from './StoryComment'
 
 class App extends Component {
   render() {
@@ -36,8 +36,8 @@ class App extends Component {
           </Switch>
         </FetchUser>
       </AppBackground>
-    );
+    )
   }
 }
 
-export default App;
+export default App
