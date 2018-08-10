@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios from 'axios'
 
-export const STORIES = 'STORIES';
-export const RECENT_STORIES = 'RECENT_STORIES';
-export const UPDATE_STORY = 'UPDATE_STORY';
-export const ADD_STORY = 'ADD_STORY';
-export const DELETE_STORY = 'DELETE_STORY';
+export const STORIES = 'STORIES'
+export const RECENT_STORIES = 'RECENT_STORIES'
+export const UPDATE_STORY = 'UPDATE_STORY'
+export const ADD_STORY = 'ADD_STORY'
+export const DELETE_STORY = 'DELETE_STORY'
 
 
 export const getStories = () => {

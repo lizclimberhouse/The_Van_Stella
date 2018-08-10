@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from 'axios'
 
-export const COMMENTS = 'COMMENTS';
-export const ADD_COMMENT = 'ADD_COMMENT';
-export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const COMMENTS = 'COMMENTS'
+export const ADD_COMMENT = 'ADD_COMMENT'
+export const DELETE_COMMENT = 'DELETE_COMMENT'
 
 export const getComments = (id) => {
   return (dispatch) => {
