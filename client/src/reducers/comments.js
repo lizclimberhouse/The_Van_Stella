@@ -1,4 +1,4 @@
-import { ADD_COMMENT, DELETE_COMMENT, COMMENTS } from '../actions/comments';
+import { ADD_COMMENT, DELETE_COMMENT, COMMENTS } from '../actions/comments'
 
 const comments = ( state = [], action ) => {
   switch (action.type) {
@@ -9,8 +9,8 @@ const comments = ( state = [], action ) => {
     case COMMENTS:
       return action.comments
     default:
-      return state;
+      return state
   }
 }
 
-export default comments;
+export default comments

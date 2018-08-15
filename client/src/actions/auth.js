@@ -5,11 +5,11 @@ import { setHeaders } from '../actions/headers'
 
 const login = user => {
   return { type: 'LOGIN', user }
-};
+}
 
 const logout = () => {
   return { type: 'LOGOUT' }
-};
+}
 
 export const registerUser = (email, password, passwordConfirmation, history) => {
   return dispatch => {
@@ -27,9 +27,9 @@ export const registerUser = (email, password, passwordConfirmation, history) => 
         const { headers } = res
         dispatch(setHeaders(headers))
         dispatch(setFlash(messages, 'red'))
-      });
-  };
-};
+      })
+  }
+}
 
 export const handleLogout = history => {
   return dispatch => {

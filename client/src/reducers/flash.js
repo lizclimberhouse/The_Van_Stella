@@ -1,12 +1,12 @@
 const flash = (state = {}, action) => {
   switch (action.type) {
     case 'SET_FLASH':
-      return { message: action.message, color: action.color };
+      return { message: action.message, color: action.color }
     case 'CLEAR_FLASH':
-      return {};
+      return {}
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default flash;
+export default flash
