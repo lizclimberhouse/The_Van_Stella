@@ -52,7 +52,7 @@ class Login extends Component {
           </Segment>
         </Form>
       </Segment>
-    );
+    )
   }
 }
 

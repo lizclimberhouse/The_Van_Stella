@@ -21,7 +21,7 @@ class NavBar extends Component {
             onClick={() => dispatch(handleLogout(history))}
           />
         </Menu.Menu>
-      );
+      )
     }
     return (
       null
@@ -36,7 +36,7 @@ class NavBar extends Component {
       //     <Menu.Item style={styles.navLinks} name='Login' />
       //   </Link>
       // </Menu.Menu>
-    );
+    )
   }
 
   render() {
@@ -55,7 +55,7 @@ class NavBar extends Component {
           { this.rightNavs() }
         </Menu>
       </div>
-    );
+    )
   }
 }
 
@@ -74,6 +74,6 @@ const styles = {
 
 const mapStateToProps = state => {
   return { user: state.user }
-};
+}
 
 export default withRouter(connect(mapStateToProps)(NavBar))

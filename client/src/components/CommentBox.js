@@ -11,7 +11,7 @@ class CommentBox extends React.Component {
   deleteComment = (id, story_id) => {
     const { dispatch } = this.props
     dispatch(deleteComment(id, story_id))
-    dispatch(setFlash('Comment Deleted', 'red'));
+    dispatch(setFlash('Comment Deleted', 'red'))
   }
 
   render() {

@@ -42,15 +42,15 @@ class Flash extends Component {
             {this.fadeFlash(dispatch)}
           </Message>
         </Container>
-      );
+      )
     }
-    return null;
+    return null
   }
 }
 
 const mapStateToProps = state => {
   const { flash } = state
   return { flash }
-};
+}
 
 export default withRouter(connect(mapStateToProps)(Flash))

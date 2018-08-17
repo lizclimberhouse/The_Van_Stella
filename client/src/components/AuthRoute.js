@@ -17,10 +17,10 @@ const AuthRoute = ({ isAuthenticated, component: Component, ...rest }) => (
           />)
     )}
   />
-);
+)
 
 const mapStateToProps = state => {
   return { isAuthenticated: state.user.id }
-};
+}
 
 export default connect(mapStateToProps)(AuthRoute)

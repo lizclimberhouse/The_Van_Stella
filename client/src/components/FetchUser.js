@@ -26,6 +26,6 @@ class FetchUser extends Component {
 
 const mapStateToProps = state => {
   return { isAuthenticated: state.user.id }
-};
+}
 
 export default connect(mapStateToProps)(FetchUser)
