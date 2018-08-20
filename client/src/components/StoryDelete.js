@@ -9,7 +9,7 @@ class StoryDelete extends React.Component {
   deleteStory = (id) => {
     const { dispatch } = this.props
     dispatch(deleteStory(id))
-    dispatch(setFlash('Story Deleted. Redirected to Home page', 'red'));
+    dispatch(setFlash('Story Deleted. Redirected to Home page', 'red'))
     this.props.history.push('/archive')
   }
 
@@ -25,4 +25,4 @@ class StoryDelete extends React.Component {
   }
 }
 
-export default connect()(StoryDelete);
+export default connect()(StoryDelete)

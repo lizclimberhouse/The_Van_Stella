@@ -18,7 +18,7 @@ class Register extends Component {
 
   handleChange = event => {
     // use e to grab the id off the element also the value and set state
-    // const { id, value } = event.target;
+    // const { id, value } = event.target
     const id = event.target.id
     const value = event.target.value
     this.setState({ [id]: value })
@@ -68,7 +68,7 @@ class Register extends Component {
           </Segment>
         </Form>
       </Segment>
-    );
+    )
   }
 }
 

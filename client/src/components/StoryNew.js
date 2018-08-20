@@ -27,7 +27,7 @@ export class StoryNew extends React.Component {
             </BackFade2>
           </BackFade1>
         </Container>
-      );
+      )
     }
   }
 
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => {
   return { stories: state.stories }
 }
 
-export default connect(mapStateToProps)(StoryNew);
+export default connect(mapStateToProps)(StoryNew)

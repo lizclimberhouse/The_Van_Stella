@@ -31,7 +31,7 @@ class StoryForm extends React.Component {
     const func = this.props.id ? updateStory : addStory
     dispatch(func(story))
     const message = this.props.id ? 'Story Updated. ' : 'Story Added. '
-    dispatch(setFlash( message, 'green'));
+    dispatch(setFlash( message, 'green'))
     this.props.history.push("/archive")
   }
 
@@ -122,6 +122,6 @@ class StoryForm extends React.Component {
 
 const mapStateToProps = (state) => {
   return { story: state.story}
-};
+}
 
-export default connect(mapStateToProps)(StoryForm);
+export default connect(mapStateToProps)(StoryForm)

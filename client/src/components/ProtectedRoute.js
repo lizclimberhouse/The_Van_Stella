@@ -17,10 +17,10 @@ const ProtectedRoute = ({ isAuthenticated, component: Component, ...rest }) => (
           />)
     )}
   />
-);
+)
 
 const mapStateToProps = state => {
   return { isAuthenticated: state.user.id }
-};
+}
 
 export default connect(mapStateToProps)(ProtectedRoute)

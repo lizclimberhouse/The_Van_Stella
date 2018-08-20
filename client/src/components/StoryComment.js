@@ -43,4 +43,4 @@ class StoryComment extends React.Component {
   }
 }
 
-export default StoryComment;
+export default StoryComment
