@@ -13,4 +13,5 @@ const Home = () => (
     <RecentStories/>
   </Container>
 )
+
 export default Home

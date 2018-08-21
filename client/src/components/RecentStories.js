@@ -36,7 +36,6 @@ const styles = {
   },
 }
 
-
 const mapStateToProps = (state) => {
   return { stories: state.stories }
 }

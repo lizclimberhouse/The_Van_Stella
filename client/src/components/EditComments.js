@@ -4,8 +4,6 @@ import { Divider } from 'semantic-ui-react'
 
 class EditComments extends React.Component {
 
-  
-
   render() {
     return(
       <div>
