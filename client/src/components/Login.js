@@ -3,7 +3,6 @@ import { Header, Segment, Form, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { handleLogin } from '../actions/auth'
 import { Header1 } from './StyledComp'
-import Mountains from '../images/mountains.jpg'
 
 class Login extends Component {
   state = { email: '', password: '' }

@@ -3,7 +3,6 @@ import { Menu, Container, Image, MenuMenu } from 'semantic-ui-react'
 import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { handleLogout } from '../actions/auth'
-import van from '../images/van.png'
 
 class NavBar extends Component {
   rightNavs = () => {
