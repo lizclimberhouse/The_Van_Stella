@@ -10,6 +10,10 @@ const Home = () => (
       <Header4>2 humans<br/>1 dog<br/>+ a van<DividerWhite />weekend warriors</Header4>
       <Divider hidden />
     </Title>
+    <div>
+      <Header1>New Post!</Header1>
+      <Header4>11 year anniversary trip to Tahoe</Header4>
+    </div>
     <RecentStories/>
   </Container>
 )
