@@ -52,6 +52,7 @@ class StellaRebuild extends React.Component {
           <StellaOptions option={option} />
         </BackFade1>
       </div>
+      // TODO - maybe add the new section here?
     )
   }
 }

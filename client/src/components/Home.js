@@ -16,6 +16,7 @@ const Home = () => (
     </div>
     <RecentStories/>
   </Container>
+  // TODO - really need to add a section about van fix-it projects
 )
 
 export default Home
