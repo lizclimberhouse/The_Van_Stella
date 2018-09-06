@@ -21,6 +21,7 @@ class StoryComment extends React.Component {
     // KEEP - console.log('Navigate somewhere')
     this.props.history.push('/archive')
     // KEEP - console.log(string) pass string back in to the ()
+    // Learned more about passing functions as well as callback functions to actions.
   }
 
   render() {

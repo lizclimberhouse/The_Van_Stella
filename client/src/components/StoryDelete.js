@@ -18,7 +18,7 @@ class StoryDelete extends React.Component {
     return(
       <div>
         <br />
-        <p>Permanently delete this story?</p>
+        <p>Delete this story?</p>
         <Button color='red' onClick={() => this.deleteStory(id)}>Confirm</Button>
       </div>
     )
