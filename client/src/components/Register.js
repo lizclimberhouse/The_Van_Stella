@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Form, Button, Segment } from 'semantic-ui-react'
+import { Form, Button, Segment } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { registerUser } from '../actions/auth'
 import { setFlash } from '../actions/flash'

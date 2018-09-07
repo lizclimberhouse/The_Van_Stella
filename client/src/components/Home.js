@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Container, Divider } from 'semantic-ui-react'
 import { Title, Header1, Header4, DividerWhite } from './StyledComp'
 import RecentStories from './RecentStories'
@@ -17,6 +17,7 @@ const Home = () => (
     <RecentStories/>
   </Container>
   // TODO - really need to add a section about van fix-it projects
+  // TODO - would love to find a plug in for the instagram feed
 )
 
 export default Home

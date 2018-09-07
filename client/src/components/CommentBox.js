@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Header, Segment, Image, Button, Rating } from 'semantic-ui-react'
-import { BackFade1, BackFade2 } from './StyledComp'
+import { Header, Button } from 'semantic-ui-react'
+import { BackFade2 } from './StyledComp'
 import { deleteComment } from '../actions/comments'
 import { setFlash } from '../actions/flash'
 
