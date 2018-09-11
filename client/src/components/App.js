@@ -10,6 +10,7 @@ import AuthRoute from './AuthRoute'
 import FetchUser from './FetchUser'
 import { Switch, Route } from 'react-router-dom'
 import Stella from './Stella'
+import Projects from './ProjectsTab/Projects'
 import Profile from './Profile'
 import StoryNew from './StoryNew'
 import { AppBackground } from './StyledComp'
@@ -26,6 +27,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/stella' component={Stella} />
+            <Route exact path='/projects' component={Projects} />
             <Route exact path='/archive' component={Archive} />
             <Route exact path='/stories/:id/comments' component={StoryComment} />
             <AuthRoute exact path='/login' component={Login} />

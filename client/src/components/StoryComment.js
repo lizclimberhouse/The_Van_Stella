@@ -1,5 +1,5 @@
-import React from 'react'
 import axios from 'axios'
+import React from 'react'
 import { Header1, BackFade1, Title, Header4, DividerWhite } from './StyledComp'
 import { Divider, Container } from 'semantic-ui-react'
 import Story from './Story'

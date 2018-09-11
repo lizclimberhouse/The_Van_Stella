@@ -48,6 +48,9 @@ class NavBar extends Component {
           <Link to='/stella'>
             <Menu.Item style={styles.navLinks} name='Stella' />
           </Link>
+          <Link to='/projects'>
+            <Menu.Item style={styles.navLinks} name='Projects' />
+          </Link>
           <Link to='/archive'>
             <Menu.Item style={styles.navLinks} name='Archive' />
           </Link>
