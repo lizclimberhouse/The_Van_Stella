@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Divider } from 'semantic-ui-react'
-// import Project from './Project'
+import Project from './Project'
 import { Title, Header1, Header4, DividerWhite } from '../StyledComp'
 
 class Projects extends React.Component {
@@ -14,7 +14,7 @@ class Projects extends React.Component {
           </Header4>
           <Divider hidden />
         </Title>
-        {/* NEXT TODO <Project url={this.props.match.path} history={this.props.history} /> */}
+        <Project url={this.props.match.path} history={this.props.history} />
       </Container>
     )
   }
