@@ -7,10 +7,11 @@ class Project extends React.Component {
     return(
       <div>
         Current Project
-
+        - tires and wheels
         Last Project
-
+        - doors and windows
         Older Projects
+        - couch, bed, storage
       </div>
     )
   }
