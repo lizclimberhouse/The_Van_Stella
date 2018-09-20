@@ -16,7 +16,6 @@ const Home = () => (
     </div>
     <RecentStories/>
   </Container>
-  // TODO - really need to add a section about van fix-it projects
   // TODO - would love to find a plug in for the instagram feed
 )
 
